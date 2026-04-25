@@ -1,183 +1,190 @@
-
 <!DOCTYPE html>
-<!-- saved from url=(0032)https://new.preview.playcode.io/ -->
-<html lang="fr" class=" idc0_343"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Bilan Interactif Aligné - Actif / Passif</title>
 
-<title>Bilan</title>
 <style>
+body {font-family: Arial, sans-serif; background: #f8fafc; margin: 20px; color: #1e293b;}
+h1 {text-align: center; color: #0f766e; margin-bottom: 20px;}
+table {width: 100%; border-collapse: collapse;}
+th, td {border: 1px solid #cbd5e1; padding: 6px; font-size: 14px; vertical-align: top;}
+th {background-color: #e0f2fe; text-align: center;}
+td input[type="text"] {width: 90%; border: 1px solid #cbd5e1; border-radius: 4px; padding: 4px;}
+.btn {background-color: #0f766e; color: white; border: none; padding: 4px 8px; border-radius: 4px; cursor: pointer; font-size: 12px; margin-left: 4px;}
+.btn:hover {background-color: #0e7490;}
+.totaux {font-weight: bold; background-color: #f1f5f9;}
+.center {text-align: center;}
+.classe-header {background-color: #bae6fd; font-weight: bold;}
+.toolbar {display:flex; justify-content:flex-end; gap:6px; margin-bottom:10px;}
+#confirmation {color: green; font-weight: bold; display: none; margin-left: 10px;}
 
-/* ===== BACKGROUND DATASHOW ===== */
-body{
-    font-family:Arial;
-    margin:0;
-    padding:20px;
-    background: linear-gradient(135deg,#001f3f,#003366,#004080);
-    color:white;
-}
+.ok-equal { color: green; }
+.not-equal { color: red; }
 
-/* Option image (décommente si tu veux)
-body{
-    background: url('background.jpg') no-repeat center center fixed;
-    background-size: cover;
-}
-*/
-
-h2{
-    text-align:center;
-    color:#ffffff;
-    font-size:28px;
-    letter-spacing:1px;
-}
-
-/* TABLE STYLE PROJECTION */
-table{
-    border-collapse:collapse;
-    width:95%;
-    margin:20px auto;
-    background:rgba(255,255,255,0.95);
-    color:#000;
-    font-size:18px;
-    border-radius:10px;
-    overflow:hidden;
-}
-
-th,td{
-    border:1px solid #003366;
-    padding:8px;
-    text-align:center;
-}
-
-th{
-    background:#003366;
-    color:white;
-    font-size:18px;
-}
-
-/* INPUTS */
-input{
-    width:100%;
-    padding:6px;
-    font-size:16px;
-}
-
-input[readonly]{
-    background:#e6e6e6;
-}
-
-/* BUTTONS */
-button{
-    background:#003366;
-    color:#fff;
-    border:none;
-    padding:6px 10px;
-    cursor:pointer;
-    font-size:16px;
-    border-radius:5px;
-}
-
-button:hover{
-    background:#0055aa;
-}
-
-/* ALERT */
-.alert{
-    color:#ff4d4d;
-    text-align:center;
-    font-weight:bold;
-    font-size:18px;
-}
-
-/* FULL SCREEN MODE */
-@media screen and (min-width:1200px){
-    body{zoom:1.2;}
-}
-
+col.actif {width:35%;}
+col.actifMontant {width:15%;}
+col.passif {width:35%;}
+col.passifMontant {width:15%;}
 </style>
 </head>
-<body data-pc-src="/index.html:96">
 
-<h2 data-pc-src="/index.html:98">💼 Bilan</h2>
+<body>
 
-<table id="bilan" data-pc-src="/index.html:100">
-  <thead data-pc-src="/index.html:101">
-    <tr data-pc-src="/index.html:102">
-      <th data-pc-src="/index.html:103">Actif</th>
-      <th data-pc-src="/index.html:104">Montant (DH)</th>
-      <th data-pc-src="/index.html:105">Passif</th>
-      <th data-pc-src="/index.html:106">Montant (DH)</th>
-      <th data-pc-src="/index.html:107">🗑️</th>
-    </tr>
-  </thead>
+<h1>Bilan Actif / Passif</h1>
 
-  <tbody id="tbodyBilan" data-pc-src="/index.html:111">
-    <!-- 10 lignes initiales -->
-    <tr data-pc-src="/index.html:113">
-      <td data-pc-src="/index.html:114"><input type="text" placeholder="" data-pc-src="/index.html:114"></td>
-      <td data-pc-src="/index.html:115"><input type="number" step="0.01" oninput="calculerTotals()" data-pc-src="/index.html:115"></td>
-      <td data-pc-src="/index.html:116"><input type="text" placeholder="" data-pc-src="/index.html:116"></td>
-      <td data-pc-src="/index.html:117"><input type="number" step="0.01" oninput="calculerTotals()" data-pc-src="/index.html:117"></td>
-      <td class="center" data-pc-src="/index.html:118"><button class="delete" onclick="viderLigne(this)" data-pc-src="/index.html:118">🗑️</button></td>
-    </tr>
-  </tbody>
 
-  <tfoot data-pc-src="/index.html:122">
-    <tr data-pc-src="/index.html:123">
-      <td class="total" data-pc-src="/index.html:124">Total Actif :</td>
-      <td class="total" id="totalActif" data-pc-src="/index.html:125">0.00</td>
-      <td class="total" data-pc-src="/index.html:126">Total Passif :</td>
-      <td class="total" id="totalPassif" data-pc-src="/index.html:127">0.00</td>
-      <td data-pc-src="/index.html:128"></td>
-    </tr>
-  </tfoot>
+
+<table>
+<colgroup>
+<col class="actif">
+<col class="actifMontant">
+<col class="passif">
+<col class="passifMontant">
+</colgroup>
+
+<thead>
+<tr>
+<th>ACTIF</th>
+<th>Montant</th>
+<th>PASSIF</th>
+<th>Montant</th>
+</tr>
+</thead>
+
+<tbody id="bilanBody"></tbody>
+
+<tfoot>
+<tr class="totaux">
+<td class="center">Total Actif</td>
+<td id="totalActif" class="center">0,00</td>
+<td class="center">Total Passif</td>
+<td id="totalPassif" class="center">0,00</td>
+</tr>
+</tfoot>
 </table>
 
-<div style="text-align:center;" data-pc-src="/index.html:133">
-  <button class="add" onclick="ajouterLigne()" data-pc-src="/index.html:134">➕ Ajouter une ligne</button>
-  <button class="clear" onclick="viderChamps()" data-pc-src="/index.html:135">🧹 Vider toutes les lignes</button>
-</div>
-
 <script>
-function calculerTotals() {
-  let totalActif = 0, totalPassif = 0;
-  document.querySelectorAll("#tbodyBilan tr").forEach(row => {
-    const montantActif = parseFloat(row.cells[1].querySelector("input")?.value) || 0;
-    const montantPassif = parseFloat(row.cells[3].querySelector("input")?.value) || 0;
-    totalActif += montantActif;
-    totalPassif += montantPassif;
-  });
-  document.getElementById("totalActif").textContent = totalActif.toFixed(2);
-  document.getElementById("totalPassif").textContent = totalPassif.toFixed(2);
+const classes = {
+actif: [
+{ id: 2, label: 'Classe 2 — Actif immobilisé' },
+{ id: 3, label: 'Classe 3 — Actif circulant' },
+{ id: 5, label: 'Classe 5 — Trésorerie (Actif)' }
+],
+passif: [
+{ id: 1, label: 'Classe 1 — Financement permanent' },
+{ id: 4, label: 'Classe 4 — Passif circulant' },
+{ id: 5, label: 'Classe 5 — Trésorerie (Passif)' }
+]
+};
+
+let lignes = JSON.parse(localStorage.getItem('bilan_classes') || '{}');
+if (!lignes.actif) lignes = {actif:{2:[],3:[],5:[]}, passif:{1:[],4:[],5:[]}};
+
+function renderTable() {
+const tbody = document.getElementById('bilanBody');
+tbody.innerHTML = '';
+
+const rowsActif = [];
+classes.actif.forEach(a=>{
+rowsActif.push({type:'header', id:a.id, label:a.label});
+lignes.actif[a.id].forEach((l,i)=>rowsActif.push({type:'ligne', id:a.id, index:i}));
+});
+
+const rowsPassif = [];
+classes.passif.forEach(p=>{
+rowsPassif.push({type:'header', id:p.id, label:p.label});
+lignes.passif[p.id].forEach((l,i)=>rowsPassif.push({type:'ligne', id:p.id, index:i}));
+});
+
+const maxRows = Math.max(rowsActif.length, rowsPassif.length);
+
+for(let i=0;i<maxRows;i++){
+const tr = document.createElement('tr');
+const aRow = rowsActif[i];
+const pRow = rowsPassif[i];
+
+// ACTIF
+if(aRow){
+if(aRow.type==='header'){
+tr.innerHTML += `<td colspan='2' class='classe-header'>${aRow.label} <button class='btn' onclick='ajouterLigne("actif",${aRow.id})'>+ Ligne</button></td>`;
+} else {
+const l = lignes.actif[aRow.id][aRow.index];
+tr.innerHTML += `<td><input type='text' value='${l.compte||''}' onchange='majLigne("actif",${aRow.id},${aRow.index},"compte",this.value)'></td>`;
+tr.innerHTML += `<td><input type='text' value='${l.montant||''}' 
+oninput='majLigne("actif",${aRow.id},${aRow.index},"montant",this.value)'>
+<button class='btn' onclick='supprimerLigne("actif",${aRow.id},${aRow.index})'>🗑</button></td>`;
+}
+} else { tr.innerHTML += '<td></td><td></td>'; }
+
+// PASSIF
+if(pRow){
+if(pRow.type==='header'){
+tr.innerHTML += `<td colspan='2' class='classe-header'>${pRow.label} <button class='btn' onclick='ajouterLigne("passif",${pRow.id})'>+ Ligne</button></td>`;
+} else {
+const l = lignes.passif[pRow.id][pRow.index];
+tr.innerHTML += `<td><input type='text' value='${l.compte||''}' onchange='majLigne("passif",${pRow.id},${pRow.index},"compte",this.value)'></td>`;
+tr.innerHTML += `<td><input type='text' value='${l.montant||''}' 
+oninput='majLigne("passif",${pRow.id},${pRow.index},"montant",this.value)'>
+<button class='btn' onclick='supprimerLigne("passif",${pRow.id},${pRow.index})'>🗑</button></td>`;
+}
+} else { tr.innerHTML += '<td></td><td></td>'; }
+
+tbody.appendChild(tr);
 }
 
-function ajouterLigne() {
-  const tbody = document.getElementById("tbodyBilan");
-  const row = document.createElement("tr");
-  row.innerHTML = `
-    <td><input type="text" placeholder="Élément Actif"></td>
-    <td><input type="number" step="0.01" oninput="calculerTotals()"></td>
-    <td><input type="text" placeholder="Élément Passif"></td>
-    <td><input type="number" step="0.01" oninput="calculerTotals()"></td>
-    <td class="center"><button class="delete" onclick="viderLigne(this)">🗑️</button></td>
-  `;
-  tbody.appendChild(row);
+majTotaux();
 }
 
-function viderLigne(btn) {
-  const row = btn.closest("tr");
-  row.querySelectorAll("input").forEach(input => input.value = "");
-  calculerTotals();
+function ajouterLigne(side,id){
+lignes[side][id].push({compte:'', montant:''});
+renderTable();
 }
 
-function viderChamps() {
-  document.querySelectorAll("#tbodyBilan input").forEach(input => input.value = "");
-  calculerTotals();
+function supprimerLigne(side,id,index){
+lignes[side][id].splice(index,1);
+renderTable();
 }
 
-calculerTotals();
-</script><script src="./Bilan DATA_files/index-CPK5NDW6.js.télécharger" id="playcode-script"></script>
+function majLigne(side,id,index,champ,valeur){
+lignes[side][id][index][champ]=valeur;
+majTotaux();
+}
+
+function majTotaux(){
+const totalActif = Object.values(lignes.actif).flat().reduce((s,l)=>s+(parseFloat(l.montant)||0),0);
+const totalPassif = Object.values(lignes.passif).flat().reduce((s,l)=>s+(parseFloat(l.montant)||0),0);
+
+const actifEl = document.getElementById('totalActif');
+const passifEl = document.getElementById('totalPassif');
+
+actifEl.textContent = totalActif.toLocaleString('fr-FR',{minimumFractionDigits:2});
+passifEl.textContent = totalPassif.toLocaleString('fr-FR',{minimumFractionDigits:2});
+
+actifEl.classList.remove("ok-equal","not-equal");
+passifEl.classList.remove("ok-equal","not-equal");
+
+if(totalActif === totalPassif){
+actifEl.classList.add("ok-equal");
+passifEl.classList.add("ok-equal");
+} else {
+actifEl.classList.add("not-equal");
+passifEl.classList.add("not-equal");
+}
+}
+
+function sauvegarder(){
+localStorage.setItem('bilan_classes', JSON.stringify(lignes));
+}
+
+
+
+renderTable();
+</script>
 <br>
 
-<a href="compta.html">⬅ Retour </a>
+<a href="index.html">⬅ Retour accueil</a>
 
-
-</body></html>
+</body>
+</html>
