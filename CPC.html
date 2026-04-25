@@ -123,30 +123,30 @@ function calculerTotaux() {
     if(text.includes('Impôts sur les résultats')) impots=montant;
   });
 
-  document.getElementById('CA').innerText = CA;
-  document.getElementById('totalProduitsExploitation').innerText = totalExplo;
-  document.getElementById('totalChargesExploitation').innerText = chargesExplo;
+  document.getElementById('CA').innerText = CA.toFixed(2);
+  document.getElementById('totalProduitsExploitation').innerText = totalExplo.toFixed(2);
+  document.getElementById('totalChargesExploitation').innerText = chargesExplo.toFixed(2);
   const resExplo=totalExplo-chargesExplo;
-  document.getElementById('resultatExploitation').innerText = resExplo;
+  document.getElementById('resultatExploitation').innerText = resExplo.toFixed(2);
 
-  document.getElementById('totalProduitsFinanciers').innerText = totalFinan;
-  document.getElementById('totalChargesFinancières').innerText = chargesFinan;
-  const resFinan=totalFinan-chargesFinan;
+  document.getElementById('totalProduitsFinanciers').innerText = totalFinan.toFixed(2);
+  document.getElementById('totalChargesFinancières').innerText = chargesFinan.toFixed(2);
+  const resFinan=totalFinan-chargesFinan.toFixed(2);
   document.getElementById('resultatFinancier').innerText=resFinan;
 
   const resCourant=resExplo+resFinan;
-  document.getElementById('resultatCourant').innerText=resCourant;
+  document.getElementById('resultatCourant').innerText=resCourant.toFixed(2);
 
-  document.getElementById('totalProduitsNonCourants').innerText=totalNonc;
-  document.getElementById('totalChargesNonCourants').innerText=chargesNonc;
+  document.getElementById('totalProduitsNonCourants').innerText=totalNonc.toFixed(2);
+  document.getElementById('totalChargesNonCourants').innerText=chargesNonc.toFixed(2);
   const resNonc=totalNonc-chargesNonc;
-  document.getElementById('resultatNonCourant').innerText=resNonc;
+  document.getElementById('resultatNonCourant').innerText=resNonc.toFixed(2);
 
   const resAvantImpots=resCourant+resNonc;
-  document.getElementById('resultatAvantImpots').innerText=resAvantImpots;
+  document.getElementById('resultatAvantImpots').innerText=resAvantImpots.toFixed(2);
 
   const resNet=resAvantImpots-impots;
-  document.getElementById('resultatNet').innerText=resNet;
+  document.getElementById('resultatNet').innerText=resNet.toFixed(2);
 }
 
 function enregistrer(){
