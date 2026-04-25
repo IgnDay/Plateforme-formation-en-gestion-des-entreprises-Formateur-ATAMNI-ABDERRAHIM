@@ -1,8 +1,7 @@
-
 <!DOCTYPE html>
-<!-- saved from url=(0203)file:///C:/Users/ordi/Documents/AAA%20MODULES%20AFFECTES%20CFIJ%20SIDI%20TAIBI/2025%202026/Module%20COMPTA%201/PARTIE%20I%20COMPTABILITE%201%20CONCEPTS%20DE%20BASE/Journal%20Comptable%20modifi%C3%A9.html -->
-<html lang="fr" class="idc8_343 idc0_343"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
 <title>Journal Comptable</title>
 <style>
   body { font-family: Arial, sans-serif; background-color: #f8fafc; margin: 30px; }
@@ -26,13 +25,9 @@
   .btn-export{ background-color:#f59e0b; color:white; }
   .btn-save{ background-color:#0ea5e9; color:white; }
   .btn-clear{ background-color:#6b7280; color:white; }
-  .btn-search{ margin-left:3px; padding:2px 6px; font-size:12px; }
-  #modal{display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.5); justify-content:center; align-items:center;}
-  #modal div{background:white; padding:20px; border-radius:10px; width:400px; max-height:80%; overflow:auto;}
-  #accountList li{padding:5px; cursor:pointer;}
-  #accountList li:hover{background:#f0f0f0;}
 </style>
-<link type="text/css" rel="stylesheet" charset="UTF-8" href="./Journal Comptable AMELIORE_files/m=el_main_css"></head>
+</head>
+
 <body>
 
 <h2>Journal Comptable</h2>
@@ -40,80 +35,23 @@
 
 <div style="text-align:center; margin-top:10px;">
   <button class="btn btn-new-op" id="btnNewOp">➕ Nouvelle opération</button>
-  <button class="btn btn-save" id="btnSave">💾 Enregistrer</button>
+  
   <button class="btn btn-clear" id="btnClear">🧹 Vider les champs</button>
-  <button class="btn btn-export" id="btnExport">📊 Exporter vers Excel</button>
-  <button class="btn btn-export" id="btnImportAccounts">📥 Importer comptes Excel</button>
-  <input type="file" id="fileInput" accept=".xlsx, .xls" style="display:none;">
 </div>
 
-<!-- Modal recherche comptes -->
-<div id="modal" style="display: none;">
-  <div>
-    <h3>Rechercher un compte</h3>
-    <input type="text" id="searchInput" placeholder="Tapez numéro ou intitulé" style="width:100%; margin-bottom:10px; padding:5px;">
-    <ul id="accountList" style="list-style:none; padding-left:0; max-height:300px; overflow:auto;"><li>1111 - </li><li>1112 - </li><li>1117 - </li><li>11171 - </li><li>11175 - </li><li>1119 - </li><li>1121 - </li><li>1122 - </li><li>1123 - </li><li>1130 - </li><li>1140 - </li><li>1151 - </li><li>1152 - </li><li>1155 - </li><li>1161 - </li><li>1169 - </li><li>1181 - </li><li>1189 - </li><li>1191 - </li><li>1199 - </li><li>1311 - </li><li>1319 - </li><li>1351 - </li><li>1352 - </li><li>1354 - </li><li>1355 - </li><li>1356 - </li><li>1358 - </li><li>1410 - </li><li>1481 - </li><li>1482 - </li><li>1483 - </li><li>1484 - </li><li>1485 - </li><li>1486 - </li><li>1487 - </li><li>1488 - </li><li>1511 - </li><li>1512 - </li><li>1513 - </li><li>1514 - </li><li>1515 - </li><li>1516 - </li><li>1518 - </li><li>1551 - </li><li>1552 - </li><li>1555 - </li><li>1558 - </li><li>1601 - </li><li>1605 - </li><li>1710 - </li><li>1720 - </li><li>2111 - </li><li>2112 - </li><li>2113 - </li><li>2114 - </li><li>2116 - </li><li>2117 - </li><li>2118 - </li><li>2121 - </li><li>2125 - </li><li>2128 - </li><li>2130 - </li><li>2210 - </li><li>2220 - </li><li>2230 - </li><li>2285 - </li><li>2311 - </li><li>2312 - </li><li>2313 - </li><li>2314 - </li><li>2316 - </li><li>2318 - </li><li>2321 - </li><li>23211 - </li><li>23214 - </li><li>23218 - </li><li>2323 - </li><li>2325 - </li><li>2327 - </li><li>2328 - </li><li>2331 - </li><li>2332 - </li><li>23321 - </li><li>23324 - </li><li>2333 - </li><li>2338 - </li><li>2340 - </li><li>2351 - </li><li>2352 - </li><li>2355 - </li><li>2356 - </li><li>2358 - </li><li>2380 - </li><li>2392 - </li><li>2393 - </li><li>2394 - </li><li>2395 - </li><li>2397 - </li><li>2398 - </li><li>2411 - </li><li>2415 - </li><li>2416 - </li><li>2418 - </li><li>2481 - </li><li>24811 - </li><li>24813 - </li><li>24818 - </li><li>2483 - </li><li>2486 - </li><li>24861 - </li><li>24864 - </li><li>2487 - </li><li>2488 - </li><li>2510 - </li><li>2581 - </li><li>2588 - </li><li>2710 - </li><li>2720 - </li><li>2811 - </li><li>28111 - </li><li>28112 - </li><li>28113 - </li><li>28114 - </li><li>28116 - </li><li>28117 - </li><li>28118 - </li><li>2812 - </li><li>28121 - </li><li>28125 - </li><li>28128 - </li><li>2813 - </li><li>2821 - </li><li>2822 - </li><li>2823 - </li><li>2828 - </li><li>2831 - </li><li>28311 - </li><li>28312 - </li><li>28313 - </li><li>28314 - </li><li>28316 - </li><li>28318 - </li><li>2832 - </li><li>28321 - </li><li>28323 - </li><li>28325 - </li><li>28327 - </li><li>28328 - </li><li>2833 - </li><li>28331 - </li><li>28332 - </li><li>28333 - </li><li>28338 - </li><li>2834 - </li><li>2835 - </li><li>28351 - </li><li>28352 - </li><li>28355 - </li><li>28356 - </li><li>28358 - </li><li>2838 - </li><li>2920 - </li><li>2930 - </li><li>2941 - </li><li>2948 - </li><li>2951 - </li><li>2958 - </li><li>3111 - </li><li>3112 - </li><li>3116 - </li><li>3118 - </li><li>3121 - </li><li>31211 - </li><li>31212 - </li><li>3122 - </li><li>31221 - </li><li>31222 - </li><li>31223 - </li><li>31224 - </li><li>31225 - </li><li>31226 - </li><li>31227 - </li><li>3123 - </li><li>31231 - </li><li>31232 - </li><li>31233 - </li><li>3126 - </li><li>3128 - </li><li>3131 - </li><li>31311 - </li><li>31312 - </li><li>31317 - </li><li>3134 - </li><li>31341 - </li><li>31342 - </li><li>31343 - </li><li>3138 - </li><li>3141 - </li><li>31411 - </li><li>31412 - </li><li>3145 - </li><li>31451 - </li><li>31452 - </li><li>31453 - </li><li>3148 - </li><li>3151 - </li><li>3152 - </li><li>3156 - </li><li>3158 - </li><li>3411 - </li><li>3413 - </li><li>3417 - </li><li>3418 - </li><li>3421 - </li><li>34211 - </li><li>34212 - </li><li>3423 - </li><li>3424 - </li><li>3425 - </li><li>3427 - </li><li>34271 - </li><li>34272 - </li><li>3428 - </li><li>3431 - </li><li>3438 - </li><li>3451 - </li><li>34511 - </li><li>34512 - </li><li>34513 - </li><li>3453 - </li><li>3455 - </li><li>34551 - </li><li>34552 - </li><li>3456 - </li><li>3458 - </li><li>3461 - </li><li>3462 - </li><li>3463 - </li><li>3464 - </li><li>3467 - </li><li>3468 - </li><li>3481 - </li><li>3482 - </li><li>3487 - </li><li>3488 - </li><li>3491 - </li><li>3493 - </li><li>3495 - </li><li>3497 - </li><li>3501 - </li><li>3502 - </li><li>3504 - </li><li>3506 - </li><li>35061 - </li><li>35062 - </li><li>3508 - </li><li>3701 - </li><li>3702 - </li><li>3911 - </li><li>3912 - </li><li>3913 - </li><li>3914 - </li><li>3915 - </li><li>3941 - </li><li>3942 - </li><li>3943 - </li><li>3946 - </li><li>3948 - </li><li>3950 - </li><li>4411 - </li><li>44111 - </li><li>44112 - </li><li>4413 - </li><li>4415 - </li><li>4417 - </li><li>4418 - </li><li>4421 - </li><li>4425 - </li><li>4427 - </li><li>4428 - </li><li>4432 - </li><li>4433 - </li><li>4434 - </li><li>4437 - </li><li>4438 - </li><li>4441 - </li><li>4443 - </li><li>4445 - </li><li>4447 - </li><li>4448 - </li><li>4452 - </li><li>44521 - </li><li>44522 - </li><li>44525 - </li><li>4453 - </li><li>4455 - </li><li>4456 - </li><li>4457 - </li><li>4458 - </li><li>4461 - </li><li>4462 - </li><li>4463 - </li><li>4464 - </li><li>4465 - </li><li>4468 - </li><li>4481 - </li><li>4483 - </li><li>4484 - </li><li>4485 - </li><li>4487 - </li><li>4488 - </li><li>4491 - </li><li>4493 - </li><li>4495 - </li><li>4497 - </li><li>4501 - </li><li>4502 - </li><li>4505 - </li><li>4506 - </li><li>4507 - </li><li>4508 - </li><li>4701 - </li><li>4702 - </li><li>5111 - </li><li>51111 - </li><li>51112 - </li><li>5113 - </li><li>51131 - </li><li>51132 - </li><li>5115 - </li><li>5118 - </li><li>5141 - </li><li>5143 - </li><li>5146 - </li><li>5148 - </li><li>5161 - </li><li>51611 - </li><li>51613 - </li><li>51614 - </li><li>5165 - </li><li>5520 - </li><li>5530 - </li><li>5541 - </li><li>5548 - </li><li>5900 - </li><li>6111 - </li><li>6112 - </li><li>6114 - </li><li>6118 - </li><li>6119 - </li><li>6121 - </li><li>61211 - </li><li>61212 - </li><li>6122 - </li><li>61221 - </li><li>61222 - </li><li>61223 - </li><li>61224 - </li><li>61225 - </li><li>61226 - </li><li>61227 - </li><li>6123 - </li><li>61231 - </li><li>61232 - </li><li>61233 - </li><li>6124 - </li><li>61241 - </li><li>61242 - </li><li>61243 - </li><li>6125 - </li><li>61251 - </li><li>61252 - </li><li>61253 - </li><li>61254 - </li><li>6126 - </li><li>61261 - </li><li>61262 - </li><li>61263 - </li><li>6128 - </li><li>6129 - </li><li>61291 - </li><li>61292 - </li><li>61293 - </li><li>61295 - </li><li>61296 - </li><li>61298 - </li><li>6131 - </li><li>61311 - </li><li>61312 - </li><li>61313 - </li><li>61314 - </li><li>61315 - </li><li>61316 - </li><li>61317 - </li><li>61318 - </li><li>6132 - </li><li>61321 - </li><li>6133 - </li><li>61331 - </li><li>61332 - </li><li>61335 - </li><li>6134 - </li><li>61341 - </li><li>61343 - </li><li>61345 - </li><li>61348 - </li><li>6135 - </li><li>61351 - </li><li>61352 - </li><li>61353 - </li><li>6136 - </li><li>61361 - </li><li>61365 - </li><li>61367 - </li><li>6137 - </li><li>61371 - </li><li>61378 - </li><li>6141 - </li><li>61411 - </li><li>61413 - </li><li>61415 - </li><li>61416 - </li><li>6142 - </li><li>61421 - </li><li>61425 - </li><li>61426 - </li><li>61428 - </li><li>6143 - </li><li>61431 - </li><li>61433 - </li><li>61435 - </li><li>61436 - </li><li>6144 - </li><li>61441 - </li><li>61442 - </li><li>61443 - </li><li>61444 - </li><li>61446 - </li><li>61447 - </li><li>61448 - </li><li>6145 - </li><li>61451 - </li><li>61455 - </li><li>61456 - </li><li>6146 - </li><li>61461 - </li><li>61462 - </li><li>6147 - </li><li>61471 - </li><li>61472 - </li><li>61473 - </li><li>6148 - </li><li>6149 - </li><li>6161 - </li><li>61611 - </li><li>61612 - </li><li>61615 - </li><li>6165 - </li><li>6167 - </li><li>61671 - </li><li>61673 - </li><li>61678 - </li><li>6168 - </li><li>6171 - </li><li>61711 - </li><li>61712 - </li><li>61713 - </li><li>61714 - </li><li>61715 - </li><li>6174 - </li><li>61741 - </li><li>61742 - </li><li>61743 - </li><li>61744 - </li><li>61745 - </li><li>6176 - </li><li>61761 - </li><li>61762 - </li><li>61763 - </li><li>61764 - </li><li>61765 - </li><li>61766 - </li><li>61768 - </li><li>6177 - </li><li>61771 - </li><li>61774 - </li><li>6178 - </li><li>6181 - </li><li>6182 - </li><li>6185 - </li><li>6186 - </li><li>6188 - </li><li>6191 - </li><li>61911 - </li><li>61912 - </li><li>6192 - </li><li>61921 - </li><li>61922 - </li><li>61923 - </li><li>61928 - </li><li>6193 - </li><li>61931 - </li><li>61932 - </li><li>61933 - </li><li>61934 - </li><li>61935 - </li><li>61938 - </li><li>6194 - </li><li>61942 - </li><li>61943 - </li><li>6195 - </li><li>61955 - </li><li>61957 - </li><li>6196 - </li><li>61961 - </li><li>61964 - </li><li>6198 - </li><li>61981 - </li><li>61984 - </li><li>6311 - </li><li>63111 - </li><li>63113 - </li><li>63114 - </li><li>63115 - </li><li>63118 - </li><li>6318 - </li><li>6331 - </li><li>6338 - </li><li>6382 - </li><li>6385 - </li><li>6386 - </li><li>6388 - </li><li>6391 - </li><li>6392 - </li><li>6393 - </li><li>6394 - </li><li>6396 - </li><li>6398 - </li><li>6512 - </li><li>6513 - </li><li>6514 - </li><li>6518 - </li><li>6561 - </li><li>6568 - </li><li>6581 - </li><li>65811 - </li><li>65812 - </li><li>6582 - </li><li>6583 - </li><li>65831 - </li><li>65833 - </li><li>6585 - </li><li>6586 - </li><li>65861 - </li><li>65862 - </li><li>65863 - </li><li>6588 - </li><li>6591 - </li><li>65911 - </li><li>65912 - </li><li>65913 - </li><li>6594 - </li><li>65941 - </li><li>65942 - </li><li>65944 - </li><li>65945 - </li><li>65946 - </li><li>6595 - </li><li>65955 - </li><li>65957 - </li><li>6596 - </li><li>65962 - </li><li>65963 - </li><li>6598 - </li><li>6701 - </li><li>6705 - </li><li>6708 - </li><li>7111 - </li><li>7113 - </li><li>7118 - </li><li>7119 - </li><li>7121 - </li><li>71211 - </li><li>71212 - </li><li>71217 - </li><li>7122 - </li><li>71221 - </li><li>71222 - </li><li>7124 - </li><li>71241 - </li><li>71242 - </li><li>71243 - </li><li>7125 - </li><li>71251 - </li><li>71252 - </li><li>71253 - </li><li>7126 - </li><li>7127 - </li><li>71271 - </li><li>71272 - </li><li>71273 - </li><li>71275 - </li><li>71276 - </li><li>71278 - </li><li>7128 - </li><li>7129 - </li><li>71291 - </li><li>71292 - </li><li>71294 - </li><li>71295 - </li><li>71298 - </li><li>7131 - </li><li>71311 - </li><li>71312 - </li><li>71317 - </li><li>7132 - </li><li>71321 - </li><li>71322 - </li><li>71327 - </li><li>7134 - </li><li>71341 - </li><li>71342 - </li><li>71343 - </li><li>7141 - </li><li>7142 - </li><li>7143 - </li><li>7148 - </li><li>7161 - </li><li>7168 - </li><li>7181 - </li><li>7182 - </li><li>7185 - </li><li>7186 - </li><li>7188 - </li><li>7191 - </li><li>7192 - </li><li>7193 - </li><li>7194 - </li><li>7195 - </li><li>7196 - </li><li>7197 - </li><li>71971 - </li><li>71972 - </li><li>71973 - </li><li>71975 - </li><li>71976 - </li><li>71978 - </li><li>7198 - </li><li>71981 - </li><li>71984 - </li><li>7321 - </li><li>7325 - </li><li>7328 - </li><li>7331 - </li><li>7338 - </li><li>7381 - </li><li>73811 - </li><li>73813 - </li><li>7383 - </li><li>7384 - </li><li>7385 - </li><li>7386 - </li><li>7388 - </li><li>7391 - </li><li>7392 - </li><li>7393 - </li><li>7394 - </li><li>7396 - </li><li>7397 - </li><li>73971 - </li><li>73973 - </li><li>73978 - </li><li>7398 - </li><li>7512 - </li><li>7513 - </li><li>7514 - </li><li>7518 - </li><li>7561 - </li><li>7568 - </li><li>7577 - </li><li>7578 - </li><li>7581 - </li><li>75811 - </li><li>75812 - </li><li>7582 - </li><li>7585 - </li><li>7586 - </li><li>75861 - </li><li>75862 - </li><li>75863 - </li><li>7588 - </li><li>7591 - </li><li>75911 - </li><li>75912 - </li><li>75913 - </li><li>7594 - </li><li>75941 - </li><li>75942 - </li><li>75944 - </li><li>75945 - </li><li>75946 - </li><li>7595 - </li><li>75955 - </li><li>75957 - </li><li>7596 - </li><li>75962 - </li><li>75963 - </li><li>7597 - </li><li>7598 - </li></ul>
-    <div style="text-align:right; margin-top:10px;">
-      <button onclick="closeModal()" style="padding:5px 10px;">Fermer</button>
-    </div>
-  </div>
-</div>
-
-<script src="./Journal Comptable AMELIORE_files/xlsx.full.min.js.télécharger"></script>
 <script>
-// --- Variables ---
 let opCount = 0;
 const container = document.getElementById("operations");
 const btnNewOp = document.getElementById("btnNewOp");
-const btnExport = document.getElementById("btnExport");
 const btnSave = document.getElementById("btnSave");
 const btnClear = document.getElementById("btnClear");
-const btnImportAccounts = document.getElementById("btnImportAccounts");
-const fileInput = document.getElementById("fileInput");
-
-let PCGM = []; // tableau qui sera rempli depuis Excel
-let currentInput = null;
-
-// --- Import comptes Excel ---
-btnImportAccounts.onclick = ()=> fileInput.click();
-
-fileInput.onchange = (e)=>{
-  const file = e.target.files[0];
-  if(!file) return;
-  const reader = new FileReader();
-  reader.onload = (evt)=>{
-    const data = new Uint8Array(evt.target.result);
-    const workbook = XLSX.read(data, {type:'array'});
-    const sheetName = workbook.SheetNames[0];
-    const sheet = workbook.Sheets[sheetName];
-    const jsonData = XLSX.utils.sheet_to_json(sheet, {header:1});
-    PCGM = jsonData.map(row => ({numero: row[0]?.toString()||"", intitule: row[1]?.toString()||""})).filter(c => c.numero);
-    alert(`✅ ${PCGM.length} comptes importés depuis Excel`);
-  };
-  reader.readAsArrayBuffer(file);
-};
-
-// --- Modal recherche comptes ---
-function openModal(input){ currentInput=input; document.getElementById("modal").style.display="flex"; document.getElementById("searchInput").value=""; filterAccounts(); document.getElementById("searchInput").focus(); }
-function closeModal(){ document.getElementById("modal").style.display="none"; }
-function filterAccounts(){
-  const query = document.getElementById("searchInput").value.toLowerCase();
-  const list = document.getElementById("accountList"); list.innerHTML="";
-  PCGM.filter(c=>c.numero.includes(query)||c.intitule.toLowerCase().includes(query))
-      .forEach(c=>{
-        const li=document.createElement("li"); li.textContent=c.numero+" - "+c.intitule;
-        li.onclick=()=>{ currentInput.value=c.numero; closeModal(); };
-        list.appendChild(li);
-      });
-}
-document.getElementById("searchInput").addEventListener("input",filterAccounts);
 
 // --- Ajouter ligne ---
 function addLine(tbody,rowData=["","","","",""]){
   const tr=document.createElement("tr");
   tr.innerHTML=`
-    <td class="col1"><input class="cell" type="text" value="${rowData[0]||""}" readonly><button class="btn-search">🔍</button></td>
-    <td class="col2"><input class="cell" type="text" value="${rowData[1]||""}" readonly><button class="btn-search">🔍</button></td>
+    <td class="col1"><input class="cell" type="text" value="${rowData[0]||""}"></td>
+    <td class="col2"><input class="cell" type="text" value="${rowData[1]||""}"></td>
     <td class="col3"><input class="cell" type="text" value="${rowData[2]||""}"></td>
     <td class="col4"><input class="cell" type="text" value="${rowData[3]||""}"></td>
     <td class="col5"><input class="cell" type="text" value="${rowData[4]||""}"></td>
@@ -121,13 +59,9 @@ function addLine(tbody,rowData=["","","","",""]){
   `;
   tr.querySelector(".btn-del").onclick=()=>tr.remove();
   tbody.appendChild(tr);
-  attachSearchButtons();
 }
 
-// --- Boutons recherche comptes ---
-function attachSearchButtons(){ document.querySelectorAll(".btn-search").forEach(btn=>{ btn.onclick=()=>{ const input=btn.parentElement.querySelector("input.cell"); openModal(input); }; }); }
-
-// --- Ligne Date ---
+// --- Ligne Date (SEULE MODIFICATION) ---
 function addDateLine(tbody){
   const tr=document.createElement("tr");
   tr.innerHTML=`<td colspan="6" style="text-align:center; font-weight:bold; background-color:#d1fae5;">
@@ -139,7 +73,9 @@ function addDateLine(tbody){
 // --- Créer opération ---
 function createOperation(data=[]){
   opCount++;
-  const div=document.createElement("div"); div.className="operation"; div.id="operation-"+opCount;
+  const div=document.createElement("div"); 
+  div.className="operation";
+
   div.innerHTML=`
     <table><tbody></tbody></table>
     <div style="text-align:center; margin-top:5px;">
@@ -147,54 +83,23 @@ function createOperation(data=[]){
       <button class="btn btn-del-op">❌ Supprimer l'opération</button>
     </div>
   `;
+
   container.appendChild(div);
+
   const tbody=div.querySelector("tbody");
-  const btnAddLine=div.querySelector(".btn-add-line");
-  btnAddLine.onclick=()=>addLine(tbody);
-  const btnDelOp=div.querySelector(".btn-del-op");
-  btnDelOp.onclick=()=>{ if(confirm("Voulez-vous vraiment supprimer cette opération ?")) div.remove(); };
+  div.querySelector(".btn-add-line").onclick=()=>addLine(tbody);
+  div.querySelector(".btn-del-op").onclick=()=>div.remove();
+
   addDateLine(tbody);
+
   if(data.length>0) data.forEach(row=>addLine(tbody,row));
   else addLine(tbody);
 }
 
-// --- Sauvegarde JSON ---
-btnSave.onclick=()=>{
-  const data=[];
-  document.querySelectorAll(".operation table").forEach(table=>{
-    const rows=[];
-    table.querySelectorAll("tbody tr").forEach(tr=>{
-      const inputs=tr.querySelectorAll("input.cell");
-      rows.push(Array.from(inputs).map(i=>i.value));
-    });
-    data.push(rows);
-  });
-  localStorage.setItem("journalComptable",JSON.stringify(data));
-  const blob=new Blob([JSON.stringify(data,null,2)],{type:"application/json"});
-  const url=URL.createObjectURL(blob);
-  const a=document.createElement("a"); a.href=url; a.download="Journal_Comptable.json"; a.click(); URL.revokeObjectURL(url);
-  alert("✅ Données enregistrées et fichier JSON téléchargé !");
-};
 
-// --- Export Excel ---
-btnExport.onclick=()=>{
-  let wb=XLSX.utils.book_new();
-  document.querySelectorAll(".operation").forEach((opDiv,index)=>{
-    const table=opDiv.querySelector("table");
-    const rows=[];
-    table.querySelectorAll("tbody tr").forEach(tr=>{
-      const inputs=tr.querySelectorAll("input.cell");
-      rows.push(Array.from(inputs).map(i=>i.value));
-    });
-    const sheetName=rows[0][0]||`Opération ${index+1}`;
-    XLSX.utils.book_append_sheet(wb,XLSX.utils.aoa_to_sheet(rows),sheetName);
-  });
-  XLSX.writeFile(wb,"Journal_Comptable.xlsx");
-};
-
-// --- Vider champs ---
+// --- Vider ---
 btnClear.onclick=()=>{
-  if(confirm("Voulez-vous vraiment vider tous les champs ?")){
+  if(confirm("Vider tous les champs ?")){
     localStorage.removeItem("journalComptable");
     container.innerHTML="";
     createOperation();
@@ -204,13 +109,14 @@ btnClear.onclick=()=>{
 // --- Nouvelle opération ---
 btnNewOp.onclick=()=>createOperation();
 
-// --- Charger sauvegarde ---
+// --- Charger ---
 function loadSavedData(){
   const saved=localStorage.getItem("journalComptable");
   if(saved) JSON.parse(saved).forEach(op=>createOperation(op));
   else createOperation();
 }
 loadSavedData();
-</script><script src="./Journal Comptable AMELIORE_files/deps-DV7IRNSR.js.télécharger" id="playcode-deps-script"></script><script src="./Journal Comptable AMELIORE_files/index-CPK5NDW6.js.télécharger" id="playcode-script"></script><div id="goog-gt-tt" class="VIpgJd-yAWNEb-L7lbkb skiptranslate" style="border-radius: 12px; margin: 0 0 0 -23px; padding: 0; font-family: &#39;Google Sans&#39;, Arial, sans-serif;" data-id=""><div id="goog-gt-vt" class="VIpgJd-yAWNEb-hvhgNd"><div class="VIpgJd-yAWNEb-hvhgNd-Ud7fr"><img src="./Journal Comptable AMELIORE_files/24px.svg" width="24" height="24" alt=""><div class=" VIpgJd-yAWNEb-hvhgNd-IuizWc-i3jM8c " dir="ltr">Original text</div></div><div class="VIpgJd-yAWNEb-hvhgNd-k77Iif"><div id="goog-gt-original-text" class="VIpgJd-yAWNEb-nVMfcd-fmcmS VIpgJd-yAWNEb-hvhgNd-axAV1"></div></div><div class="VIpgJd-yAWNEb-hvhgNd-N7Eqid ltr"><div class="VIpgJd-yAWNEb-hvhgNd-N7Eqid-B7I4Od ltr" dir="ltr"><div class="VIpgJd-yAWNEb-hvhgNd-UTujCb">Rate this translation</div><div class="VIpgJd-yAWNEb-hvhgNd-eO9mKe">Your feedback will be used to help improve Google Translate</div></div><div class="VIpgJd-yAWNEb-hvhgNd-xgov5 ltr"><button id="goog-gt-thumbUpButton" type="button" class="VIpgJd-yAWNEb-hvhgNd-bgm6sf" title="Good translation" aria-label="Good translation" aria-pressed="false"><span id="goog-gt-thumbUpIcon"><svg width="24" height="24" viewBox="0 0 24 24" focusable="false" class="VIpgJd-yAWNEb-hvhgNd-THI6Vb NMm5M"><path d="M21 7h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 0S7.08 6.85 7 7H2v13h16c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73V9c0-1.1-.9-2-2-2zM7 18H4V9h3v9zm14-7l-3 7H9V8l4.34-4.34L12 9h9v2z"></path></svg></span><span id="goog-gt-thumbUpIconFilled"><svg width="24" height="24" viewBox="0 0 24 24" focusable="false" class="VIpgJd-yAWNEb-hvhgNd-THI6Vb NMm5M"><path d="M21 7h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 0S7.08 6.85 7 7v13h11c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73V9c0-1.1-.9-2-2-2zM5 7H1v13h4V7z"></path></svg></span></button><button id="goog-gt-thumbDownButton" type="button" class="VIpgJd-yAWNEb-hvhgNd-bgm6sf" title="Poor translation" aria-label="Poor translation" aria-pressed="false"><span id="goog-gt-thumbDownIcon"><svg width="24" height="24" viewBox="0 0 24 24" focusable="false" class="VIpgJd-yAWNEb-hvhgNd-THI6Vb NMm5M"><path d="M3 17h6.31l-.95 4.57-.03.32c0 .41.17.79.44 1.06L9.83 24s7.09-6.85 7.17-7h5V4H6c-.83 0-1.54.5-1.84 1.22l-3.02 7.05c-.09.23-.14.47-.14.73v2c0 1.1.9 2 2 2zM17 6h3v9h-3V6zM3 13l3-7h9v10l-4.34 4.34L12 15H3v-2z"></path></svg></span><span id="goog-gt-thumbDownIconFilled"><svg width="24" height="24" viewBox="0 0 24 24" focusable="false" class="VIpgJd-yAWNEb-hvhgNd-THI6Vb NMm5M"><path d="M3 17h6.31l-.95 4.57-.03.32c0 .41.17.79.44 1.06L9.83 24s7.09-6.85 7.17-7V4H6c-.83 0-1.54.5-1.84 1.22l-3.02 7.05c-.09.23-.14.47-.14.73v2c0 1.1.9 2 2 2zm16 0h4V4h-4v13z"></path></svg></span></button></div></div><div id="goog-gt-votingHiddenPane" class="VIpgJd-yAWNEb-hvhgNd-aXYTce"><form id="goog-gt-votingForm" action="file://translate.googleapis.com/translate_voting?client=te_lib" method="post" target="votingFrame" class="VIpgJd-yAWNEb-hvhgNd-aXYTce"><input type="text" name="sl" id="goog-gt-votingInputSrcLang"><input type="text" name="tl" id="goog-gt-votingInputTrgLang"><input type="text" name="query" id="goog-gt-votingInputSrcText"><input type="text" name="gtrans" id="goog-gt-votingInputTrgText"><input type="text" name="vote" id="goog-gt-votingInputVote"></form><iframe name="votingFrame" frameborder="0" src="./Journal Comptable AMELIORE_files/saved_resource.html"></iframe></div></div></div>
+</script>
 
-</body></html>
+</body>
+</html>
