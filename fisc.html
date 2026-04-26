@@ -2,284 +2,268 @@
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
-<title>Calcul impôt sur le revenu salarial</title>
+<title>Plateforme de Formation</title>
 
 <style>
-
 body{
 font-family:Arial;
-margin:20px;
+margin:0;
+background:#f4f6f9;
 }
 
-h1{
-font-size:34px;
-}
-
-table{
-border-collapse:collapse;
-width:100%;
-}
-
-td{
-border:1px solid #444;
-padding:12px;   /* hauteur ligne 200% */
-}
-
-input{
-width:240px;   /* largeur champs 200% */
-text-align:right;
-padding:6px;
-}
-
-button{
+/* ===== HEADER ANIMÉ ===== */
+.topbar{
+display:flex;
+align-items:center;
+justify-content:space-between;
+background:#0f766e;
+color:white;
 padding:10px 20px;
-font-size:16px;
-margin-bottom:15px;
-cursor:pointer;
+position:sticky;
+top:0;
+z-index:1000;
 }
 
-.label{
+.logo{
+font-size:20px;
 font-weight:bold;
 }
 
-.explain{
-font-size:14px;
+.nav{
+display:flex;
+gap:15px;
 }
 
-.beige{background:#efe1b5;}
-.blue{background:#d6deea;}
-.green{background:#dfe9d8;}
-.green2{background:#c6d9a7;}
-.orange{background:#e5b596;}
-.grey{background:#efefef;}
-.yellow{background:#fff14a;font-weight:bold;}
+.nav a{
+color:white;
+text-decoration:none;
+padding:6px 10px;
+border-radius:4px;
+transition:0.3s;
+}
 
+.nav a:hover{
+background:#0e7490;
+transform:translateY(-2px);
+}
+
+/* Recherche */
+.search-box input{
+padding:5px;
+border-radius:4px;
+border:none;
+}
+
+/* HEADER */
+header{
+background:#0f766e;
+color:white;
+padding:20px;
+text-align:center;
+}
+
+/* MENU */
+.menu{
+max-width:900px;
+margin:20px auto;
+padding:10px;
+}
+
+.section-title{
+background:#e0f2fe;
+padding:10px;
+font-weight:bold;
+margin-top:20px;
+border-left:6px solid #0f766e;
+}
+
+.card{
+display:block;
+background:white;
+padding:12px;
+margin:8px 0;
+text-decoration:none;
+color:#1e293b;
+border-radius:6px;
+box-shadow:0 2px 5px rgba(0,0,0,0.1);
+transition:0.2s;
+}
+
+.card:hover{
+transform:scale(1.02);
+background:#f1f5f9;
+}
+
+.icon{
+display:inline-block;
+width:10px;
+height:10px;
+border-radius:50%;
+margin-right:8px;
+}
+
+.red{background:#dc2626;}
+.blue{background:#2563eb;}
+.green{background:#16a34a;}
+
+/* ===== FOOTER ===== */
+footer{
+background:#1e293b;
+color:white;
+padding:20px;
+margin-top:40px;
+}
+
+.footer-container{
+display:flex;
+flex-wrap:wrap;
+justify-content:space-between;
+gap:20px;
+}
+
+.footer-section{
+flex:1;
+min-width:200px;
+}
+
+.footer-section h3{
+margin-bottom:10px;
+}
+
+.social a{
+display:inline-block;
+margin-right:10px;
+color:white;
+text-decoration:none;
+font-size:20px;
+transition:0.3s;
+}
+
+.social a:hover{
+color:#38bdf8;
+}
+
+/* Responsive */
+@media(max-width:600px){
+.nav{flex-wrap:wrap;}
+.footer-container{flex-direction:column;}
+}
 </style>
-
 </head>
 
 <body>
+
+<!-- ===== BARRE HAUT ===== -->
+<div class="topbar">
+<div class="logo"> IgnDay</div>
+
+<div class="nav">
+<a href="#">Filières</a>
+<a href="#">Modules</a>
+<a href="#">Formulaires éducatifs interactifs</a>
+<a href="#">Résumés avec définitions des concepts </a>
+<a href="#">Exercices d'évaluation</a>
+<a href="#">Langue 🌐</a>
+</div>
+
+<div class="search-box">
+<input type="text" placeholder="Rechercher...">
+</div>
+</div>
+
+<!-- HEADER -->
+<header>
+<h1>📘 Plateforme de formation et d'apprentissage interactif "IgnDay"</h1>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Plateforme de Formation</title>
+
+
+
+<!-- ===== BANNIÈRE ANIMÉE ===== -->
+<div class="banner">
+<h2>🚀 Formation pratique & évolution rapide</h2>
+<p>
+Apprenez concrètement avec des exercices réels et développez des compétences directement utilisables en entreprise.<br>
+🎯 Objectif : être opérationnel rapidement | 📈 Progression rapide | 💼 Compétences professionnelles
+</p>
+</div>
+
+</header>
+
+<!-- CONTENU -->
+<div class="menu">
+
+<div class="section-title">Fiscalité</div>
+
+<a href="RDC.html" class="card">
+<span class="icon red"></span> Résumés avec définition des concepts
+</a>
+<div id="submenu" class="submenu">
+
+<a href="ir.html" class="card sub">
+➡️ Impôt sur le revenu (IR)
+</a>
+
+<a href="is.html" class="card sub">
+➡️ Impôt sur les sociétés (IS)
+</a>
+
+<a href="tva.html" class="card sub">
+➡️ TVA
+</a>
+
+<a href="autres.html" class="card sub">
+➡️ Autres concepts fiscaux
+</a>
+
+</div>
+<a href="FEI.html" class="card">
+<span class="icon red"></span> Formulaires éducatifs interactifs
+</a>
+
+<a href="EI.html" class="card">
+<span class="icon blue"></span> Exercices d’évaluation 
+</a>
+
+</div>
 <br>
 
 <a href="index.html">⬅ Retour accueil</a>
-<h1>Calcul impôt sur le revenu salarial</h1>
+<!-- ===== FOOTER ===== -->
+<footer>
 
-<button onclick="vider()">Vider les champs</button>
+<div class="footer-container">
 
-<table>
+<div class="footer-section">
+<h3>Contact </h3>
+<p>📍 Adresse : Maroc</p>
+<p>📱 Téléphone : +212 00000000</p>
+</div>
 
-<tr class="beige">
-<td class="label">A. Salaire Brut</td>
-<td><input id="A" oninput="calc()"></td>
-<td class="explain">
-(Les traitements + indemnités + salaires + allocations spéciales +
-remboursements forfaitaires + pensions + rentes viagères + avantages en nature)
-</td>
-</tr>
+<div class="footer-section">
+<h3>🌐 Réseaux sociaux</h3>
+<div class="social">
+<a href="#">Facebook</a>
+<a href="#">Twitter</a>
+<a href="#">WhatsApp</a>
+<a href="#">Instagram</a>
+<a href="#">YouTube</a>
+  <a href="#">TikTok</a>
+</div>
+</div>
 
-<tr class="beige">
-<td class="label">B. Exonérations</td>
-<td><input id="B" oninput="calc()"></td>
-<td class="explain">(Consulter la liste des exonérations)</td>
-</tr>
+<div class="footer-section">
+<h3>ℹ️ À propos</h3>
+<p>Plateforme de formation et d'apprentissage interactif dédiée aux stagiaires en formation professionnelle, aux étudiants ou aux professionnels dans le domaine de gestion des entreprises </p>
+</div>
 
-<tr class="beige">
-<td class="label">C. Salaire Brut Imposable (A-B)</td>
-<td id="C">-</td>
-<td></td>
-</tr>
+</div>
 
-<tr class="blue">
-<td class="label">D. Frais professionnels</td>
-<td id="D">-</td>
-<td class="explain">
-(Inhérents à la fonction ou à l'emploi)
-&nbsp;&nbsp;
-<span class="yellow">Taux</span>
-<input id="tauxFP" value="0" oninput="calc()"> %
-</td>
-</tr>
+</footer>
 
-<tr class="blue">
-<td class="label">E. Retenues supportées</td>
-<td><input id="E" oninput="calc()"></td>
-<td class="explain">(Pour la constitution de pensions ou retraite)</td>
-</tr>
-
-<tr class="blue">
-<td class="label">F. Cotisations</td>
-<td><input id="F" oninput="calc()"></td>
-<td class="explain">
-(Cotisations organismes marocains de prévoyance sociale & sécurité sociale)
-</td>
-</tr>
-
-<tr class="blue">
-<td class="label">G. Assurance groupe</td>
-<td><input id="G" oninput="calc()"></td>
-<td class="explain">
-(couvrant maladie, maternité, invalidité et décès)
-</td>
-</tr>
-
-<tr class="blue">
-<td class="label">H. Remboursement prêts</td>
-<td><input id="H" oninput="calc()"></td>
-<td class="explain">
-(Contrat Mourabaha ou Ijara Mountahia Bitamlik pour logement principal)
-</td>
-</tr>
-
-<tr class="blue">
-<td class="label">I. Total déductions (D+E+F+G+H)</td>
-<td id="I">-</td>
-<td></td>
-</tr>
-
-<tr class="green">
-<td class="label">J. Abattement pensions</td>
-<td><input id="J" oninput="calc()"></td>
-<td></td>
-</tr>
-
-<tr class="green">
-<td class="label">K. Abattement artistes</td>
-<td><input id="K" oninput="calc()"></td>
-<td></td>
-</tr>
-
-<tr class="green">
-<td class="label">L. Abattement revenus salariaux</td>
-<td><input id="L" oninput="calc()"></td>
-<td class="explain">
-(versés aux sportifs professionnels, entraîneurs, éducateurs)
-</td>
-</tr>
-
-<tr class="green2">
-<td class="label">M. Total Abattements (J+K+L)</td>
-<td id="M">-</td>
-<td></td>
-</tr>
-
-<tr class="beige">
-<td class="label">N. Salaire Net Imposable (C-I-M)</td>
-<td id="N">-</td>
-<td></td>
-</tr>
-
-<tr class="orange">
-<td class="label">O. Impôt Brut</td>
-<td id="O">-</td>
-<td>
-<span class="yellow">Taux IR</span>
-<input id="tauxIR" value="0" oninput="calc()"> %
-
-<span class="yellow">Montant à déduire</span>
-<input id="deduction" oninput="calc()">
-(Suivant barème IR)
-</td>
-</tr>
-
-<tr class="grey">
-<td class="label">P. Charges famille</td>
-<td><input id="P" oninput="calc()"></td>
-<td></td>
-</tr>
-
-<tr class="grey">
-<td class="label">Q. Retraites étrangères</td>
-<td><input id="Q" oninput="calc()"></td>
-<td></td>
-</tr>
-
-<tr class="grey">
-<td class="label">R. Impôt étranger</td>
-<td><input id="R" oninput="calc()"></td>
-<td></td>
-</tr>
-
-<tr class="grey">
-<td class="label">S. Crédit impôt</td>
-<td><input id="S" oninput="calc()"></td>
-<td></td>
-</tr>
-
-<tr class="grey">
-<td class="label">T. Total déductions impôt</td>
-<td id="T">-</td>
-<td></td>
-</tr>
-
-<tr class="orange">
-<td class="label">U. Impôt Net (O-T)</td>
-<td id="U">-</td>
-<td></td>
-</tr>
-
-</table>
-
-<script>
-
-function calc(){
-
-let A=parseFloat(document.getElementById("A").value)||0;
-let B=parseFloat(document.getElementById("B").value)||0;
-let E=parseFloat(document.getElementById("E").value)||0;
-let F=parseFloat(document.getElementById("F").value)||0;
-let G=parseFloat(document.getElementById("G").value)||0;
-let H=parseFloat(document.getElementById("H").value)||0;
-
-let tauxFP=parseFloat(document.getElementById("tauxFP").value)||0;
-let tauxIR=parseFloat(document.getElementById("tauxIR").value)||0;
-let deduction=parseFloat(document.getElementById("deduction").value)||0;
-
-let J=parseFloat(document.getElementById("J").value)||0;
-let K=parseFloat(document.getElementById("K").value)||0;
-let L=parseFloat(document.getElementById("L").value)||0;
-
-let P=parseFloat(document.getElementById("P").value)||0;
-let Q=parseFloat(document.getElementById("Q").value)||0;
-let R=parseFloat(document.getElementById("R").value)||0;
-let S=parseFloat(document.getElementById("S").value)||0;
-
-let C=A-B;
-let D=C*(tauxFP/100);
-let I=D+E+F+G+H;
-let M=J+K+L;
-let N=C-I-M;
-let O=(N*(tauxIR/100))-deduction;
-let T=P+Q+R+S;
-let U=O-T;
-
-document.getElementById("C").innerHTML=C.toFixed(2);
-document.getElementById("D").innerHTML=D.toFixed(2);
-document.getElementById("I").innerHTML=I.toFixed(2);
-document.getElementById("M").innerHTML=M.toFixed(2);
-document.getElementById("N").innerHTML=N.toFixed(2);
-document.getElementById("O").innerHTML=O.toFixed(2);
-document.getElementById("T").innerHTML=T.toFixed(2);
-document.getElementById("U").innerHTML=U.toFixed(2);
-
-}
-
-function vider(){
-
-let inputs=document.querySelectorAll("input");
-
-inputs.forEach(i=>{
-if(i.id!="tauxFP" && i.id!="tauxIR"){
-i.value="";
-}
-});
-
-document.querySelectorAll("td[id]").forEach(td=>{
-td.innerHTML="-";
-});
-
-}
-
-</script>
 
 </body>
 </html>
