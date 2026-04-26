@@ -1,25 +1,343 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <title>Formulaires éducatifs interactis</title>
-  <link rel="stylesheet" href="css/style.css">
+<meta charset="UTF-8">
+<title>Plateforme de Formation</title>
+
+<style>
+body{
+font-family:Arial;
+margin:0;
+background:#f4f6f9;
+}
+
+/* ===== HEADER ANIMÉ ===== */
+.topbar{
+display:flex;
+align-items:center;
+justify-content:space-between;
+background:#0f766e;
+color:white;
+padding:10px 20px;
+position:sticky;
+top:0;
+z-index:1000;
+}
+
+.logo{
+font-size:20px;
+font-weight:bold;
+}
+
+.nav{
+display:flex;
+gap:15px;
+}
+
+.nav a{
+color:white;
+text-decoration:none;
+padding:6px 10px;
+border-radius:4px;
+transition:0.3s;
+}
+
+.nav a:hover{
+background:#0e7490;
+transform:translateY(-2px);
+}
+
+/* Recherche */
+.search-box input{
+padding:5px;
+border-radius:4px;
+border:none;
+}
+
+/* HEADER */
+header{
+background:#0f766e;
+color:white;
+padding:20px;
+text-align:center;
+}
+
+/* MENU */
+.menu{
+max-width:900px;
+margin:20px auto;
+padding:10px;
+}
+
+.section-title{
+background:#e0f2fe;
+padding:10px;
+font-weight:bold;
+margin-top:20px;
+border-left:6px solid #0f766e;
+}
+
+.card{
+display:block;
+background:white;
+padding:12px;
+margin:8px 0;
+text-decoration:none;
+color:#1e293b;
+border-radius:6px;
+box-shadow:0 2px 5px rgba(0,0,0,0.1);
+transition:0.2s;
+}
+
+.card:hover{
+transform:scale(1.02);
+background:#f1f5f9;
+}
+
+.icon{
+display:inline-block;
+width:10px;
+height:10px;
+border-radius:50%;
+margin-right:8px;
+}
+
+.red{background:#dc2626;}
+.blue{background:#2563eb;}
+.green{background:#16a34a;}
+
+/* ===== FOOTER ===== */
+footer{
+background:#1e293b;
+color:white;
+padding:20px;
+margin-top:40px;
+}
+
+.footer-container{
+display:flex;
+flex-wrap:wrap;
+justify-content:space-between;
+gap:20px;
+}
+
+.footer-section{
+flex:1;
+min-width:200px;
+}
+
+.footer-section h3{
+margin-bottom:10px;
+}
+
+.social a{
+display:inline-block;
+margin-right:10px;
+color:white;
+text-decoration:none;
+font-size:20px;
+transition:0.3s;
+}
+
+.social a:hover{
+color:#38bdf8;
+}
+
+/* Responsive */
+@media(max-width:600px){
+.nav{flex-wrap:wrap;}
+.footer-container{flex-direction:column;}
+}
+</style>
 </head>
+
 <body>
+
+<!-- ===== BARRE HAUT ===== -->
+<div class="topbar">
+<div class="logo"> IgnDay</div>
+
+<div class="nav">
+<a href="#">Filières</a>
+<a href="#">Modules</a>
+<a href="#">Formulaires éducatifs interactifs</a>
+<a href="#">Résumés avec définitions des concepts </a>
+<a href="#">Exercices d'évaluation</a>
+<a href="#">Langue 🌐</a>
+</div>
+
+<div class="search-box">
+<input type="text" placeholder="Rechercher...">
+</div>
+</div>
+
+<!-- HEADER -->
+<header>
+<h1>📘 Plateforme de formation et d'apprentissage interactif "IgnDay"</h1>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Plateforme de Formation</title>
+
+
+
+<!-- ===== BANNIÈRE ANIMÉE ===== -->
+<div class="banner">
+<h2>🚀 Formation pratique & évolution rapide</h2>
+<p>
+Apprenez concrètement avec des exercices réels et développez des compétences directement utilisables en entreprise.<br>
+🎯 Objectif : être opérationnel rapidement | 📈 Progression rapide | 💼 Compétences professionnelles
+</p>
+</div>
 <br>
 
 <a href="index.html">⬅ Retour accueil</a>
-<header>
-  <h1>Formulaires éducatifs interactifs</h1>
-  <p>Choisissez un Travail à Faire</p>
+
 </header>
 
+<!-- CONTENU -->
 <div class="menu">
-  <a href="Bilan.html" class="card"> Construire un Bilan</a>
-  <a href="Comptes schématiques.html" class="card"> Enregistrer des opérations dans les Comptes Schématiques</a>
-  <a href="CPC.html" class="card"> Construire un Compte de produits et de charges "CPC"</a>
-  <a href="journal.html" class="card"> Enregistrer des écritures comptables au Journal</a>
+
+<div class="section-title">Comptabilité générale</div>
+
+<a href="RDC.html" class="card">
+<span class="icon red"></span> Résumés avec définition des concepts
+</a>
+<div id="submenu" class="submenu">
+
+<a href="Notion de la comptabilité générale.html" class="card sub">
+➡️ Notion de la comptabilité générale 
+</a>
+
+<a href="Le bilan comptable.html" class="card sub">
+➡️ Le bilan comptable
+</a>
+
+<a href="L’analyse comptable des opérations.html" class="card sub">
+➡️ L’analyse comptable des opérations
+</a>
+
+<a href="Notion de compte.html" class="card sub">
+➡️ Notion de compte
+</a>
+<a href="CPC.html" class="card sub">
+➡️ Le compte des produits et charges
+</a>
+<a href="Le cadre comptable marocain.html" class="card sub">
+➡️ Le cadre comptable marocain
+</a>
+<a href="Le virement comptable.html" class="card sub">
+➡️ Le virement comptable
+</a>
+<a href="L’organisation comptable.html" class="card sub">
+➡️ L’organisation comptable
+</a>
+<a href="Le journal comptable.html" class="card sub">
+➡️ Le journal comptable
+</a>
+<a href="Le grand livre.html" class="card sub">
+➡️ Le grand livre 
+</a>
+<a href="La balance.html" class="card sub">
+➡️ La balance 
+</a>
+<a href="L’enregistrement opérations d’achat et de vente.html" class="card sub">
+➡️ L’enregistrement opérations d’achat et de vente 
+</a>
+<a href="L’enregistrement dés éléments courants divers.html" class="card sub">
+➡️ L’enregistrement dés éléments courants divers 
+</a>
+<a href="L’enregistrement des opérations relatives aux règlement financiers.html" class="card sub">
+➡️ L’enregistrement des opérations relatives aux règlement financiers 
+</a>
+<a href="Les travaux de fin d'exercice (Travaux d'inventaire).html" class="card sub">
+➡️ Les travaux de fin d'exercice (Travaux d'inventaire) 
+</a>
+<a href="L ’enregistrement des opérations relatives aux règlement financiers.html" class="card sub">
+➡️ L ’enregistrement des opérations relatives aux règlement financiers 
+</a>
 </div>
+<a href="FEI.html" class="card">
+<span class="icon red"></span> Formulaires éducatifs interactifs
+</a>
+<a href="Construire un bilan.html" class="card sub">
+➡️ Construire un bilan 
+</a>
+<a href="Enregsiter des opérations dans les comptes schématiques.html" class="card sub">
+➡️ Enregsiter des opérations dans les comptes schématiques 
+</a>
+<a href="Construire un compte de produits et de charges CPC.html" class="card sub">
+➡️ Construire un compte de produits et de charges CPC 
+</a>
+<a href="Construire un compte de produits et de charges CPC.html" class="card sub">
+➡️ Enregsiter les opérations comptable au journal 
+</a>
+<a href="Etablir une facture.html" class="card sub">
+➡️ Etablir une facture 
+</a>
+<a href="Calculer les dotations d'amortissements.html" class="card sub">
+➡️ Calculer les dotations d'amortissements 
+</a>
+<a href="Etablir tableau d'amortissment constant ou linéaire.html" class="card sub">
+➡️ Etablir tableau d'amortissment constant ou linéaire 
+</a>
+<a href="Etablir tableau d'amortissment dégressif.html" class="card sub">
+➡️ Etablir tableau d'amortissment dégressif 
+</a>
+<a href="Calculer les dotations aux provisions.html" class="card sub">
+➡️ Calculer les dotations aux provisions 
+</a>
+<a href="Tableau de l'état des créances avec réajustement.html" class="card sub">
+➡️ Tableau de l'état des créances avec réajustement  
+</a>
+<a href="Tableau de l'état des titres avec réajustement.html" class="card sub">
+➡️ Tableau de l'état des titres avec réajustement  
+</a>
+<a href="EI.html" class="card">
+<span class="icon blue"></span> Exercices d’évaluation 
+</a>
+<a href="Exercice 1.html" class="card sub">
+➡️ Exercice 1 
+<a href="Exercice 2.html" class="card sub">
+➡️ Exercice 2
+</a>
+</div>
+<br>
+
+<a href="index.html">⬅ Retour accueil</a>
+<!-- ===== FOOTER ===== -->
+<footer>
+
+<div class="footer-container">
+
+<div class="footer-section">
+<h3>Contact </h3>
+<p>📍 Adresse : Maroc</p>
+<p>📱 Téléphone : +212 00000000</p>
+</div>
+
+<div class="footer-section">
+<h3>🌐 Réseaux sociaux</h3>
+<div class="social">
+<a href="#">Facebook</a>
+<a href="#">Twitter</a>
+<a href="#">WhatsApp</a>
+<a href="#">Instagram</a>
+<a href="#">YouTube</a>
+  <a href="#">TikTok</a>
+</div>
+</div>
+
+<div class="footer-section">
+<h3>ℹ️ À propos</h3>
+<p>Plateforme de formation et d'apprentissage interactif dédiée aux stagiaires en formation professionnelle, aux étudiants ou aux professionnels dans le domaine de gestion des entreprises </p>
+</div>
+
+</div>
+
+</footer>
+
 
 </body>
 </html>
