@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Exercices et études de cas avec corrigés (Concepts de base)
+</title>
+
+<style>
+body{
+    font-family: Arial;
+    margin:0;
+    background:#f4f6f9;
+}
+
+header{
+    background:#2c3e50;
+    color:white;
+    padding:20px;
+    text-align:center;
+}
+
+nav{
+    background:#34495e;
+    padding:10px;
+    text-align:center;
+}
+
+nav button{
+    margin:5px;
+    padding:10px 15px;
+    border:none;
+    background:#d35400;
+    color:white;
+    cursor:pointer;
+    border-radius:5px;
+    font-size:14px;
+}
+
+nav button:hover{
+    background:#a84300;
+}
+
+section{
+    display:none;
+    padding:30px;
+    font-size:19px;
+}
+
+.active{
+    display:block;
+}
+
+h2{
+    color:#2c3e50;
+}
+
+h3{
+    color:#d35400;
+}
+
+ul{
+    line-height:1.8;
+}
+
+.highlight{
+    background:#fdebd0;
+    padding:12px;
+    border-left:5px solid #d35400;
+    margin:15px 0;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    margin-top:20px;
+}
+
+td{
+    border:1px solid #333;
+    padding:10px;
+    text-align:center;
+}
+
+footer{
+    text-align:center;
+    padding:10px;
+    background:#2c3e50;
+    color:white;
+}
+</style>
+
+<script>
+function showSection(id){
+    let sections = document.querySelectorAll("section");
+    sections.forEach(sec => sec.classList.remove("active"));
+    document.getElementById(id).classList.add("active");
+}
+</script>
+
+</head>
+
+<body>
+
+<header>
+    <h1>📘 Exercices et études de cas avec corrigés (Concepts de base)</h1>
+</header>
+
+<nav>
+    <button onclick="showSection('def')">Exerices</button>
+    <button onclick="showSection('role')">Etudes de cas</button>
+</nav>
+
+<section id="EXE" class="active">
+    <h2>Exerices</h2>
+
+    
+</section>
+
+<section id="EC">
+    <h2>Etudes de cas</h2>
+
+    
+</section>
+
+
+
+
+<footer>
+Formation en comptabilité générale
+<br>
+
+<a href="P1M1.html">⬅ Retour </a>
+</footer>
+
+</body>
+</html>
+
