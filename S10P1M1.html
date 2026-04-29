@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Le Grand Livre</title>
+
+<style>
+body{
+    font-family: Arial;
+    margin:0;
+    background:#f4f6f9;
+}
+
+header{
+    background:#2c3e50;
+    color:white;
+    padding:20px;
+    text-align:center;
+}
+
+nav{
+    background:#34495e;
+    padding:10px;
+    text-align:center;
+}
+
+nav button{
+    margin:5px;
+    padding:10px 15px;
+    border:none;
+    background:#2980b9;
+    color:white;
+    cursor:pointer;
+    border-radius:5px;
+    font-size:14px;
+}
+
+nav button:hover{
+    background:#1f618d;
+}
+
+section{
+    display:none;
+    padding:30px;
+    font-size:19px;
+}
+
+.active{
+    display:block;
+}
+
+h2{
+    color:#2c3e50;
+}
+
+h3{
+    color:#2980b9;
+}
+
+ul{
+    line-height:1.8;
+}
+
+.highlight{
+    background:#eaf2f8;
+    padding:12px;
+    border-left:5px solid #2980b9;
+    margin:15px 0;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    margin-top:20px;
+}
+
+td{
+    border:1px solid #333;
+    padding:10px;
+    text-align:center;
+}
+
+footer{
+    text-align:center;
+    padding:10px;
+    background:#2c3e50;
+    color:white;
+}
+</style>
+
+<script>
+function showSection(id){
+    let sections = document.querySelectorAll("section");
+    sections.forEach(sec => sec.classList.remove("active"));
+    document.getElementById(id).classList.add("active");
+}
+</script>
+
+</head>
+
+<body>
+
+<header>
+    <h1>📘 Le Grand Livre</h1>
+</header>
+
+<nav>
+    <button onclick="showSection('def')">Définition</button>
+    <button onclick="showSection('caract')">Caractéristiques</button>
+    <button onclick="showSection('presentation')">Présentation</button>
+</nav>
+
+<section id="def" class="active">
+    <h2>📘 Définition du grand livre</h2>
+
+    <p>
+        Le grand livre est un document comptable obligatoire qui regroupe,
+        par compte, toutes les opérations enregistrées dans le journal.
+    </p>
+
+    <div class="highlight">
+        ✔ Regroupe les opérations par nature<br>
+        ✔ Reprend les écritures du journal<br>
+        ✔ Permet le suivi de chaque compte
+    </div>
+</section>
+
+<section id="caract">
+    <h2>📚 Caractéristiques du grand livre</h2>
+
+    <ul>
+        <li>Document obligatoire</li>
+        <li>Regroupe tous les comptes</li>
+        <li>Classe les opérations par compte</li>
+        <li>Pas besoin d’être coté ni paraphé</li>
+    </ul>
+
+    <div class="highlight">
+        ✔ Chaque compte possède sa propre page ou fiche
+    </div>
+
+    <p>
+        👉 Il est souvent présenté sous forme de classeur ou fichier.
+    </p>
+</section>
+
+<section id="presentation">
+    <h2>📊 Présentation du grand livre</h2>
+
+    <h3>Exemple d’un compte :</h3>
+
+    <table>
+        <tr>
+            <td colspan="5"><b>Compte : Fournisseur (4411)</b></td>
+        </tr>
+
+        <tr>
+            <td><b>Date</b></td>
+            <td><b>Libellé</b></td>
+            <td><b>Débit</b></td>
+            <td><b>Crédit</b></td>
+            <td><b>Solde</b></td>
+        </tr>
+
+        <tr>
+            <td>01/01</td>
+            <td>Achat marchandises</td>
+            <td></td>
+            <td>10 000</td>
+            <td>10 000</td>
+        </tr>
+
+        <tr>
+            <td>05/01</td>
+            <td>Paiement fournisseur</td>
+            <td>4 000</td>
+            <td></td>
+            <td>6 000</td>
+        </tr>
+    </table>
+
+    <div class="highlight">
+        ✔ Chaque compte retrace ses mouvements (Débit / Crédit)<br>
+        ✔ Permet de calculer facilement le solde
+    </div>
+</section>
+
+<footer>
+Formation en comptabilité générale
+<br>
+
+<a href="P1M1.html">⬅ Retour </a>
+
+</footer>
+
+</body>
+</html>
+
