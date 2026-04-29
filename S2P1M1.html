@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Le Bilan Comptable</title>
+
+<style>
+body{
+    font-family: Arial;
+    margin:0;
+    background:#f4f6f9;
+}
+
+header{
+    background: #2980b9;
+    color:white;
+    padding:20px;
+    text-align:center;
+}
+
+nav{
+    background:#34495e;
+    padding:10px;
+    text-align:center;
+}
+
+nav button{
+    margin:5px;
+    padding:10px 15px;
+    border:none;
+    background:#3498db;
+    color:white;
+    cursor:pointer;
+    border-radius:5px;
+    font-size:14px;
+}
+
+nav button:hover{
+    background:#2980b9;
+}
+
+section{
+    display:none;
+    padding:30px;
+    font-size:19px;
+}
+
+.active{
+    display:block;
+}
+
+h2{
+    color:#2c3e50;
+}
+
+h3{
+    color: #2c3e50;
+}
+
+ul{
+    line-height:1.8;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    margin-top:20px;
+}
+
+td{
+    border:1px solid #444;
+    padding:10px;
+    text-align:center;
+}
+
+.highlight{
+    background:#dff9fb;
+    padding:10px;
+    border-left:5px solid #00a8ff;
+    margin:15px 0;
+}
+
+footer{
+    text-align:center;
+    padding:10px;
+    background:#2c3e50;
+    color:white;
+}
+</style>
+
+<script>
+function showSection(id){
+    let sections = document.querySelectorAll("section");
+    sections.forEach(sec => sec.classList.remove("active"));
+    document.getElementById(id).classList.add("active");
+}
+</script>
+
+</head>
+
+<body>
+
+<header>
+    <h1>📘 Le Bilan Comptable</h1>
+</header>
+
+<nav>
+    <button onclick="showSection('def')">Définition</button>
+    <button onclick="showSection('comp')">Composantes</button>
+    <button onclick="showSection('structure')">Structure</button>
+    <button onclick="showSection('classes')">Classes</button>
+    <button onclick="showSection('variation')">Variations</button>
+    <button onclick="showSection('resultat')">Résultat</button>
+    <button onclick="showSection('exemple')">Exemple</button>
+    <button onclick="showSection('Formulaire éducatif interactif')">Formulaire éducatif interactif</button>
+    <button onclick="showSection('Exercice d’évaluation')">Exercice d’évaluation</button>
+
+</nav>
+
+<section id="def" class="active">
+    <h2>📘 Définition du bilan</h2>
+    <p>
+        Le bilan est un document comptable que chaque entreprise doit produire au moins une fois par an, il doit obéir à des normes de présentation légales. 
+Le bilan fait le point sur la situation du patrimoine de l’entreprise à un moment donné, il résume ce que possède l’entreprise et ce qui constitue l’origine de ce qu’elle possède.
+    </p>
+
+    <div class="highlight">
+        ✔ Il montre ce que possède l’entreprise (ACTIF)<br>
+        ✔ Il montre l’origine des ressources (PASSIF)
+    </div>
+
+    <p>
+        Le bilan est donc une photographie du patrimoine de l’entreprise.
+    </p>
+</section>
+
+<section id="comp">
+    <h2>📊 Les composantes du bilan</h2>
+
+    <h3>ACTIF (La partie gauche)</h3>
+    <ul>
+        <li>Biens </li>
+        <li>Créances </li>
+    </ul>
+
+    <h3>PASSIF (La partie droite)</h3>
+    <ul>
+        <li>Capitaux propres</li>
+        <li>Dettes</li>
+    </ul>
+
+    <div class="highlight">
+        👉 Actif = Emplois des ressources<br>
+        👉 Passif = Origine des ressources
+    </div>
+</section>
+
+<section id="structure">
+    <h2>📑 Structure du bilan suivant le plan comptable général marocain (PCGM)</h2>
+
+    <table>
+        <tr>
+            <td><b>ACTIF</b></td>
+            <td><b>PASSIF</b></td>
+        </tr>
+        <tr>
+            <td>Emplois (Classes ou Masses 02,03 et 05) </td>
+            <td>Ressources (Classes ou Masses 01,04 et 05)</td>
+        </tr>
+    </table>
+
+    <div class="highlight">
+        ⚖️ Total Emplois = Total Ressources
+    </div>
+</section>
+
+<section id="classes">
+    <h2>📚 Classes du bilan</h2>
+
+    <h3>ACTIF</h3>
+    <ul>
+        <li><b>Classe 02 : Actif immobilisé </b> (Immobilisations en non valeur, incorporelles, corporelles et financières...)</li>
+        <li><b>Classe 03 : Actif circulant </b> (Stocks, Créances de l'actif circulant, Titres et valeurs de placement...) </li>
+        <li><b>Classe 05 : Trésorerie </b> (Trésorerie-Actif)</li>
+    </ul>
+
+    <h3>PASSIF</h3>
+    <ul>
+        <li><b>Classe 01: Financement permanent </b> (Capitaux propres, Capitaux propres et assimilés, Dettes de financement...)</li>
+        <li><b>Classe 04 : Passif circulant </b> (Dettes du passif circulant...)</li>
+        <li><b>Classe 05 : Trésorerie </b> (Trésorerie-Passif)</li>
+    </ul>
+</section>
+
+<section id="variation">
+    <h2>📈 Variations du bilan</h2>
+
+    <p>A la fin d'un exercice comptable, le bilan fait apparaître une différence entre le total actif et le total passif. 
+Cette différence correspond à un résultat réalisé par l'entreprise. 
+</p>
+    
+    
+</section>
+
+<section id="resultat">
+    <h2>💰 Résultat comptable</h2>
+
+    <p>
+        Résultat = différence entre Actif et Passif
+    </p>
+
+    <ul>
+        <li><b>Actif > Passif :</b> Bénéfice</li>
+        <li><b>Actif < Passif :</b> Perte</li>
+    </ul>
+
+    <div class="highlight">
+        ✔ Le résultat influence les capitaux propres
+    </div>
+</section>
+
+<section id="exemple">
+    <h2>🧠 Exemple simplifié</h2>
+
+    <p><b>Cas 1 : Bénéfice</b></p>
+    <ul>
+        <li>Achat : 5 000 DH</li>
+        <li>Vente : 8 000 DH</li>
+        <li>Résultat : +3 000 DH</li>
+    </ul>
+
+    <p><b>Cas 2 : Perte</b></p>
+    <ul>
+        <li>Achat : 5 000 DH</li>
+        <li>Vente : 3 000 DH</li>
+        <li>Résultat : -2 000 DH</li>
+    </ul>
+</section>
+
+<section id="Formulaire éducatif interactif">
+    <h2>🧠 Construire un bilan</h2>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Bilan Interactif Aligné - Actif / Passif</title>
+
+<style>
+body {font-family: Arial, sans-serif; background: #f8fafc; margin: 20px; color: #1e293b;}
+h1 {text-align: center; color: #0f766e; margin-bottom: 20px;}
+table {width: 100%; border-collapse: collapse;}
+th, td {border: 1px solid #cbd5e1; padding: 6px; font-size: 14px; vertical-align: top;}
+th {background-color: #e0f2fe; text-align: center;}
+td input[type="text"] {width: 90%; border: 1px solid #cbd5e1; border-radius: 4px; padding: 4px;}
+.btn {background-color: #0f766e; color: white; border: none; padding: 4px 8px; border-radius: 4px; cursor: pointer; font-size: 12px; margin-left: 4px;}
+.btn:hover {background-color: #0e7490;}
+.totaux {font-weight: bold; background-color: #f1f5f9;}
+.center {text-align: center;}
+.classe-header {background-color: #bae6fd; font-weight: bold;}
+.toolbar {display:flex; justify-content:flex-end; gap:6px; margin-bottom:10px;}
+#confirmation {color: green; font-weight: bold; display: none; margin-left: 10px;}
+
+.ok-equal { color: green; }
+.not-equal { color: red; }
+
+col.actif {width:35%;}
+col.actifMontant {width:15%;}
+col.passif {width:35%;}
+col.passifMontant {width:15%;}
+</style>
+</head>
+
+<body>
+
+<h1>Bilan Actif / Passif</h1>
+
+
+
+<table>
+<colgroup>
+<col class="actif">
+<col class="actifMontant">
+<col class="passif">
+<col class="passifMontant">
+</colgroup>
+
+<thead>
+<tr>
+<th>ACTIF</th>
+<th>Montant</th>
+<th>PASSIF</th>
+<th>Montant</th>
+</tr>
+</thead>
+
+<tbody id="bilanBody"></tbody>
+
+<tfoot>
+<tr class="totaux">
+<td class="center">Total Actif</td>
+<td id="totalActif" class="center">0,00</td>
+<td class="center">Total Passif</td>
+<td id="totalPassif" class="center">0,00</td>
+</tr>
+</tfoot>
+</table>
+
+<script>
+const classes = {
+actif: [
+{ id: 2, label: 'Classe 2 — Actif immobilisé' },
+{ id: 3, label: 'Classe 3 — Actif circulant' },
+{ id: 5, label: 'Classe 5 — Trésorerie (Actif)' }
+],
+passif: [
+{ id: 1, label: 'Classe 1 — Financement permanent' },
+{ id: 4, label: 'Classe 4 — Passif circulant' },
+{ id: 5, label: 'Classe 5 — Trésorerie (Passif)' }
+]
+};
+
+let lignes = JSON.parse(localStorage.getItem('bilan_classes') || '{}');
+if (!lignes.actif) lignes = {actif:{2:[],3:[],5:[]}, passif:{1:[],4:[],5:[]}};
+
+function renderTable() {
+const tbody = document.getElementById('bilanBody');
+tbody.innerHTML = '';
+
+const rowsActif = [];
+classes.actif.forEach(a=>{
+rowsActif.push({type:'header', id:a.id, label:a.label});
+lignes.actif[a.id].forEach((l,i)=>rowsActif.push({type:'ligne', id:a.id, index:i}));
+});
+
+const rowsPassif = [];
+classes.passif.forEach(p=>{
+rowsPassif.push({type:'header', id:p.id, label:p.label});
+lignes.passif[p.id].forEach((l,i)=>rowsPassif.push({type:'ligne', id:p.id, index:i}));
+});
+
+const maxRows = Math.max(rowsActif.length, rowsPassif.length);
+
+for(let i=0;i<maxRows;i++){
+const tr = document.createElement('tr');
+const aRow = rowsActif[i];
+const pRow = rowsPassif[i];
+
+// ACTIF
+if(aRow){
+if(aRow.type==='header'){
+tr.innerHTML += `<td colspan='2' class='classe-header'>${aRow.label} <button class='btn' onclick='ajouterLigne("actif",${aRow.id})'>+ Ligne</button></td>`;
+} else {
+const l = lignes.actif[aRow.id][aRow.index];
+tr.innerHTML += `<td><input type='text' value='${l.compte||''}' onchange='majLigne("actif",${aRow.id},${aRow.index},"compte",this.value)'></td>`;
+tr.innerHTML += `<td><input type='text' value='${l.montant||''}' 
+oninput='majLigne("actif",${aRow.id},${aRow.index},"montant",this.value)'>
+<button class='btn' onclick='supprimerLigne("actif",${aRow.id},${aRow.index})'>🗑</button></td>`;
+}
+} else { tr.innerHTML += '<td></td><td></td>'; }
+
+// PASSIF
+if(pRow){
+if(pRow.type==='header'){
+tr.innerHTML += `<td colspan='2' class='classe-header'>${pRow.label} <button class='btn' onclick='ajouterLigne("passif",${pRow.id})'>+ Ligne</button></td>`;
+} else {
+const l = lignes.passif[pRow.id][pRow.index];
+tr.innerHTML += `<td><input type='text' value='${l.compte||''}' onchange='majLigne("passif",${pRow.id},${pRow.index},"compte",this.value)'></td>`;
+tr.innerHTML += `<td><input type='text' value='${l.montant||''}' 
+oninput='majLigne("passif",${pRow.id},${pRow.index},"montant",this.value)'>
+<button class='btn' onclick='supprimerLigne("passif",${pRow.id},${pRow.index})'>🗑</button></td>`;
+}
+} else { tr.innerHTML += '<td></td><td></td>'; }
+
+tbody.appendChild(tr);
+}
+
+majTotaux();
+}
+
+function ajouterLigne(side,id){
+lignes[side][id].push({compte:'', montant:''});
+renderTable();
+}
+
+function supprimerLigne(side,id,index){
+lignes[side][id].splice(index,1);
+renderTable();
+}
+
+function majLigne(side,id,index,champ,valeur){
+lignes[side][id][index][champ]=valeur;
+majTotaux();
+}
+
+function majTotaux(){
+const totalActif = Object.values(lignes.actif).flat().reduce((s,l)=>s+(parseFloat(l.montant)||0),0);
+const totalPassif = Object.values(lignes.passif).flat().reduce((s,l)=>s+(parseFloat(l.montant)||0),0);
+
+const actifEl = document.getElementById('totalActif');
+const passifEl = document.getElementById('totalPassif');
+
+actifEl.textContent = totalActif.toLocaleString('fr-FR',{minimumFractionDigits:2});
+passifEl.textContent = totalPassif.toLocaleString('fr-FR',{minimumFractionDigits:2});
+
+actifEl.classList.remove("ok-equal","not-equal");
+passifEl.classList.remove("ok-equal","not-equal");
+
+if(totalActif === totalPassif){
+actifEl.classList.add("ok-equal");
+passifEl.classList.add("ok-equal");
+} else {
+actifEl.classList.add("not-equal");
+passifEl.classList.add("not-equal");
+}
+}
+
+function sauvegarder(){
+localStorage.setItem('bilan_classes', JSON.stringify(lignes));
+}
+
+
+
+renderTable();
+</script>
+
+</body>
+</html>
+
+</section>
+<section id="Exercice d’évaluation">
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Exercice Bilan de démarrage</title>
+
+<style>
+body{
+    font-family: Arial, sans-serif;
+    margin: 30px;
+    background-color: #f4f6f7;
+    line-height: 1.8;
+}
+
+h1{
+    color:#2c3e50;
+}
+
+.container{
+    background: white;
+    padding: 25px;
+    border-left: 6px solid #3498db;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+ul{
+    margin-left: 20px;
+}
+
+</style>
+</head>
+
+<body>
+
+<h1>Exercice : Bilan de démarrage</h1>
+
+<div class="container">
+
+<p>
+Le 10 juin 2025, trois associés décident de constituer une entreprise dénommée 
+<strong>« ATLAS ELEC »</strong>, spécialisée dans la vente en gros de matériel électrique.
+</p>
+
+<p><strong>Les apports initiaux des associés se présentent comme suit :</strong></p>
+
+<ul>
+<li>Monsieur Atlas apporte un capital de <strong>350 000 MAD</strong> ;</li>
+<li>Monsieur Karim apporte un capital de <strong>250 000 MAD</strong> ;</li>
+<li>Monsieur Yassine apporte un capital de <strong>150 000 MAD</strong>.</li>
+</ul>
+
+<p><strong>Dans le cadre du démarrage de son activité, l’entreprise acquiert les éléments suivants :</strong></p>
+
+<ul>
+<li>Un local pour une valeur de <strong>500 000 MAD</strong> ;</li>
+<li>Un fonds commercial estimé à <strong>120 000 MAD</strong> ;</li>
+<li>Un véhicule d’une valeur de <strong>100 000 MAD</strong>, dont 50 % sont financés par un emprunt bancaire ;</li>
+<li>Un matériel informatique pour un montant de <strong>40 000 MAD</strong> ;</li>
+<li>Un stock de marchandises d’une valeur de <strong>80 000 MAD</strong>, dont <strong>60 000 MAD</strong> sont acquis à crédit auprès d’un fournisseur.</li>
+</ul>
+
+<p>
+À l’issue de ces opérations, les disponibilités restantes sont réparties comme suit :
+</p>
+
+<ul>
+<li><strong>15 000 MAD</strong> sont déposés en banque ;</li>
+<li><strong>5 000 MAD</strong> sont conservés en caisse.</li>
+</ul>
+
+<p><strong>Travail à faire :</strong></p>
+
+<p>Présenter le bilan de démarrage de l’entreprise.</p>
+
+</div>
+
+</body>
+</html></section>
+
+<footer>
+   Formation en comptabilité générale
+<br>
+
+<a href="P1M1.html">⬅ Retour </a>
+
+</footer>
+
+</body>
+</html>
+
