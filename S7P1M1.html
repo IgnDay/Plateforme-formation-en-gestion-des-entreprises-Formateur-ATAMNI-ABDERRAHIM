@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Le Virement Comptable</title>
+
+<style>
+body{
+    font-family: Arial;
+    margin:0;
+    background:#f4f6f9;
+}
+
+header{
+    background:#2c3e50;
+    color:white;
+    padding:20px;
+    text-align:center;
+}
+
+nav{
+    background:#34495e;
+    padding:10px;
+    text-align:center;
+}
+
+nav button{
+    margin:5px;
+    padding:10px 15px;
+    border:none;
+    background:#16a085;
+    color:white;
+    cursor:pointer;
+    border-radius:5px;
+    font-size:14px;
+}
+
+nav button:hover{
+    background:#138d75;
+}
+
+section{
+    display:none;
+    padding:30px;
+    font-size:19px;
+}
+
+.active{
+    display:block;
+}
+
+h2{
+    color:#2c3e50;
+}
+
+h3{
+    color:#16a085;
+}
+
+ul{
+    line-height:1.8;
+}
+
+.highlight{
+    background:#e8f8f5;
+    padding:12px;
+    border-left:5px solid #16a085;
+    margin:15px 0;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    margin-top:20px;
+}
+
+td{
+    border:1px solid #444;
+    padding:10px;
+    text-align:center;
+}
+
+footer{
+    text-align:center;
+    padding:10px;
+    background:#2c3e50;
+    color:white;
+}
+</style>
+
+<script>
+function showSection(id){
+    let sections = document.querySelectorAll("section");
+    sections.forEach(sec => sec.classList.remove("active"));
+    document.getElementById(id).classList.add("active");
+}
+</script>
+
+</head>
+
+<body>
+
+<header>
+    <h1>📘 Le Virement Comptable</h1>
+</header>
+
+<nav>
+    <button onclick="showSection('def')">Définition</button>
+    <button onclick="showSection('mecanisme')">Mécanisme</button>
+    <button onclick="showSection('utilite')">Utilité</button>
+    <button onclick="showSection('exemples')">Exemples</button>
+</nav>
+
+<section id="def" class="active">
+    <h2>📘 Définition du virement comptable</h2>
+
+    <p>
+        Le virement comptable est une opération qui consiste à transférer
+        une somme d’un compte à un autre.
+    </p>
+
+    <div class="highlight">
+        ✔ Passage d’un compte vers un autre<br>
+        ✔ Sans modifier le total global<br>
+        ✔ Simple changement de répartition
+    </div>
+</section>
+
+<section id="mecanisme">
+    <h2>⚙️ Mécanisme du virement</h2>
+
+    <p>
+        Le virement peut se faire de deux manières :
+    </p>
+
+    <ul>
+        <li>Du <b>débit d’un compte</b> vers le débit d’un autre compte</li>
+        <li>Du <b>crédit d’un compte</b> vers le crédit d’un autre compte</li>
+    </ul>
+
+    <div class="highlight">
+        👉 Il n’y a pas création de richesse, seulement un transfert
+    </div>
+</section>
+
+<section id="utilite">
+    <h2>🎯 Utilité du virement comptable</h2>
+
+    <ul>
+        <li><b>✔ Rectification des erreurs :</b> corriger une mauvaise imputation</li>
+        <li><b>✔ Ordre de virement bancaire :</b> transfert d’argent entre comptes</li>
+        <li><b>✔ Division des comptes :</b> détailler les informations</li>
+        <li><b>✔ Regroupement des comptes :</b> simplifier la présentation</li>
+    </ul>
+
+    <div class="highlight">
+        ✔ Le virement améliore la précision et la clarté de la comptabilité
+    </div>
+</section>
+
+<section id="exemples">
+    <h2>🧠 Exemples</h2>
+
+    <table>
+        <tr>
+            <td><b>Situation</b></td>
+            <td><b>Action</b></td>
+        </tr>
+        <tr>
+            <td>Erreur client (ALI / ADIL)</td>
+            <td>Virement pour corriger</td>
+        </tr>
+        <tr>
+            <td>Transfert bancaire</td>
+            <td>Déplacement d’argent</td>
+        </tr>
+        <tr>
+            <td>Suivi détaillé clients</td>
+            <td>Division des comptes</td>
+        </tr>
+        <tr>
+            <td>Présentation globale</td>
+            <td>Regroupement</td>
+        </tr>
+    </table>
+
+    <div class="highlight">
+        ✔ Le virement = outil de correction et d’organisation
+    </div>
+</section>
+
+<footer>
+    Formation en comptabilité générale
+<br>
+
+<a href="P1M1.html">⬅ Retour </a>
+
+</footer>
+
+</body>
+</html>
+
