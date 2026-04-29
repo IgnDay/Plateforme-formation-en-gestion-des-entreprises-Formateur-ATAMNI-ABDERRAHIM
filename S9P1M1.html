@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Le Journal Comptable</title>
+
+<style>
+body{
+    font-family: Arial;
+    margin:0;
+    background:#f4f6f9;
+}
+
+header{
+    background:#2c3e50;
+    color:white;
+    padding:20px;
+    text-align:center;
+}
+
+nav{
+    background:#34495e;
+    padding:10px;
+    text-align:center;
+}
+
+nav button{
+    margin:5px;
+    padding:10px 15px;
+    border:none;
+    background:#e84393;
+    color:white;
+    cursor:pointer;
+    border-radius:5px;
+    font-size:14px;
+}
+
+nav button:hover{
+    background:#c2185b;
+}
+
+section{
+    display:none;
+    padding:30px;
+    font-size:19px;
+}
+
+.active{
+    display:block;
+}
+
+h2{
+    color:#2c3e50;
+}
+
+h3{
+    color:#e84393;
+}
+
+ul{
+    line-height:1.8;
+}
+
+.highlight{
+    background:#fde4ef;
+    padding:12px;
+    border-left:5px solid #e84393;
+    margin:15px 0;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    margin-top:20px;
+}
+
+td{
+    border:1px solid #444;
+    padding:10px;
+    text-align:center;
+}
+
+footer{
+    text-align:center;
+    padding:10px;
+    background:#2c3e50;
+    color:white;
+}
+</style>
+
+<script>
+function showSection(id){
+    let sections = document.querySelectorAll("section");
+    sections.forEach(sec => sec.classList.remove("active"));
+    document.getElementById(id).classList.add("active");
+}
+</script>
+
+</head>
+
+<body>
+
+<header>
+    <h1>📘 Le Journal Comptable</h1>
+</header>
+
+<nav>
+    <button onclick="showSection('def')">Définition</button>
+    <button onclick="showSection('utilite')">Utilité</button>
+    <button onclick="showSection('obligation')">Obligations</button>
+    <button onclick="showSection('presentation')">Présentation</button>
+</nav>
+
+<section id="def" class="active">
+    <h2>📘 Définition du journal</h2>
+
+    <p>
+        Le journal est un registre comptable dans lequel toutes les opérations 
+        de l’entreprise sont enregistrées par ordre chronologique.
+    </p>
+
+    <div class="highlight">
+        ✔ Enregistrement chronologique<br>
+        ✔ Suivi des opérations<br>
+        ✔ Base de la comptabilité
+    </div>
+</section>
+
+<section id="utilite">
+    <h2>🎯 Utilité du journal</h2>
+
+    <ul>
+        <li>Suivre toutes les opérations réalisées</li>
+        <li>Contrôler les enregistrements comptables</li>
+        <li>Assurer la transparence</li>
+        <li>Faciliter la vérification</li>
+    </ul>
+
+    <div class="highlight">
+        ✔ Le journal est un outil de contrôle essentiel
+    </div>
+</section>
+
+<section id="obligation">
+    <h2>⚖️ Obligations légales</h2>
+
+    <ul>
+        <li>✔ Tenue obligatoire</li>
+        <li>✔ Pages numérotées (côtées)</li>
+        <li>✔ Signé par un juge (paraphé)</li>
+        <li>✔ Sans ratures ni altérations</li>
+        <li>✔ Enregistrement chronologique</li>
+    </ul>
+
+    <div class="highlight">
+        ✔ Une comptabilité irrégulière peut entraîner des sanctions
+    </div>
+</section>
+
+<section id="presentation">
+    <h2>📊 Présentation du journal</h2>
+
+    <table>
+        <tr>
+            <td><b>Débit</b></td>
+            <td><b>Crédit</b></td>
+            <td><b>Date</b></td>
+            <td><b>Débit</b></td>
+            <td><b>Crédit</b></td>
+        </tr>
+        <tr>
+            <td>N° compte </td>
+            <td>N° compte </td>
+            <td>Intitulé de(s) compte(s) à débiter (Par convention alignée à gauche) ****************************************************************et au-dessous l'intitulé de(s) compte(s) à créditer (par convention alignée à droite)</td>
+            <td>Montant </td>
+            <td>Montant </td>
+        </tr>
+    </table>
+    
+    <div class="highlight">
+        ✔ Chaque opération est enregistrée avec précision et avec son libellé
+    </div>
+</section>
+
+<footer>
+    Formation en comptabilité générale
+<br>
+
+<a href="P1M1.html">⬅ Retour </a>
+
+</footer>
+
+</body>
+</html>
+
