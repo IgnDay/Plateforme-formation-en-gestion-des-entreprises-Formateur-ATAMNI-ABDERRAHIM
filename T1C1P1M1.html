@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Résumé - Comptabilité Générale</title>
+
+<style>
+body{
+    font-family: Arial;
+    margin:0;
+    background:#f4f6f9;
+}
+
+header{
+    background: #16a085;
+    color:white;
+    padding:20px;
+    text-align:center;
+}
+
+nav{
+    background:#34495e;
+    padding:10px;
+    text-align:center;
+}
+
+nav button{
+    margin:5px;
+    padding:10px 15px;
+    border:none;
+    background:#1abc9c;
+    color:white;
+    cursor:pointer;
+    border-radius:5px;
+    font-size:14px;
+}
+
+nav button:hover{
+    background:#16a085;
+}
+
+section{
+    display:none;
+    padding:30px;
+    font-size:20px;
+}
+
+.active{
+    display:block;
+}
+
+h2{
+    color:#2c3e50;
+}
+
+ul{
+    line-height:1.8;
+}
+
+footer{
+    text-align:center;
+    padding:10px;
+    background:#2c3e50;
+    color:white;
+}
+.q{
+    background:white;
+    padding:15px;
+    margin:10px auto;
+    width:80%;
+    text-align:left;
+    border-radius:8px;
+    box-shadow:0 0 5px rgba(0,0,0,0.1);
+}
+</style>
+
+<script>
+function showSection(id){
+    let sections = document.querySelectorAll("section");
+    sections.forEach(sec => sec.classList.remove("active"));
+    document.getElementById(id).classList.add("active");
+}
+</script>
+
+</head>
+
+<body>
+
+<header>
+    <h1>Notion de la Comptabilité Générale</h1>
+</header>
+
+<nav>
+    <button onclick="showSection('def')">Définition</button>
+    <button onclick="showSection('types')">Types</button>
+    <button onclick="showSection('role')">Rôle</button>
+    <button onclick="showSection('utilite')">Utilité</button>
+    <button onclick="showSection('obligation')">Obligation tenue de la comptabilité</button>
+    <button onclick="showSection('sources')">Sources</button>
+    <button onclick="showSection('regles')">Obligations de l’entreprise</button>
+    <button onclick="showSection('EE')">Exercice d'évaluation</button>
+</nav>
+
+<section id="def" class="active">
+ <h2>📘 Définition</h2>
+<p>
+La comptabilité générale est une technique qui permet 
+d’enregistrer toutes les opérations financières de l’entreprise 
+durant une période appelée exercice comptable.
+</p>
+</section>
+
+<section id="types">
+    <h2>📊 Types de comptabilité</h2>
+    <ul>
+        <li><b>Comptabilité nationale :</b> analyse de l’économie globale</li>
+        <li><b>Comptabilité publique :</b> opérations de l’État</li>
+        <li><b>Comptabilité des entreprises :</b>
+            <ul>
+                <li>Comptabilité générale</li>
+                <li>Comptabilité analytique</li>
+                <li>Comptabilité des sociétés</li>
+            </ul>
+        </li>
+    </ul>
+</section>
+
+<section id="role">
+    <h2>🎯 Rôle</h2>
+    <ul>
+        <li>Instrument d’information financière</li>
+        <li>Outil de gestion</li>
+        <li>Moyen de preuve juridique</li>
+    </ul>
+</section>
+
+<section id="utilite">
+    <h2>💡 Utilité</h2>
+    <ul>
+        <li>Déterminer le résultat (bénéfice ou perte)</li>
+        <li>Aider à la prise de décision</li>
+        <li>Informer :</li>
+        <ul>
+            <li>Dirigeants</li>
+            <li>État</li>
+            <li>Partenaires</li>
+            <li>Créanciers</li>
+        </ul>
+    </ul>
+</section>
+
+<section id="obligation">
+    <h2>⚖️ Caractère obligatoire</h2>
+    <p>
+        Toute entreprise doit tenir une comptabilité selon la loi 9-88 
+        et le code de commerce.
+    </p>
+    <p>
+        Elle doit respecter le Plan Comptable Général pour garantir 
+        la normalisation.
+    </p>
+</section>
+
+<section id="sources">
+    <h2>📂 Sources</h2>
+    <ul>
+        <li>Cadre légal (loi 9-88, loi 44-03)</li>
+        <li>Code Général de Normalisation Comptable</li>
+        <li>Cadre comptable normal ou simplifié</li>
+    </ul>
+</section>
+
+<section id="regles">
+    <h2>📑 Obligations de l’entreprise</h2>
+    <ul>
+        <li>Établir et conserver les documents commerciaux</li>
+        <li>Établir et conserver les documents comptables</li>
+    </ul>
+</section>
+<section id="EE">
+<h2>📝 Exercice d’évaluation (QCU)</h2>
+
+<form id="quizForm">
+
+<div class="q">
+<p>1. La comptabilité générale permet principalement :</p>
+<label><input type="radio" name="q1" value="0"> D’analyser uniquement les coûts</label><br>
+<label><input type="radio" name="q1" value="1"> D’enregistrer toutes les opérations financières</label><br>
+<label><input type="radio" name="q1" value="0"> De prévoir le futur uniquement</label>
+</div>
+
+<div class="q">
+<p>2. L’exercice comptable correspond :</p>
+<label><input type="radio" name="q2" value="1"> À une période donnée d’activité</label><br>
+<label><input type="radio" name="q2" value="0"> À une seule opération</label><br>
+<label><input type="radio" name="q2" value="0"> À une facture</label>
+</div>
+
+<div class="q">
+<p>3. La comptabilité analytique sert à :</p>
+<label><input type="radio" name="q3" value="1"> Analyser les coûts</label><br>
+<label><input type="radio" name="q3" value="0"> Calculer l’impôt</label><br>
+<label><input type="radio" name="q3" value="0"> Gérer la trésorerie</label>
+</div>
+
+<div class="q">
+<p>4. La comptabilité est un moyen :</p>
+<label><input type="radio" name="q4" value="1"> De preuve juridique</label><br>
+<label><input type="radio" name="q4" value="0"> De publicité</label><br>
+<label><input type="radio" name="q4" value="0"> De marketing</label>
+</div>
+
+<div class="q">
+<p>5. Le résultat comptable permet :</p>
+<label><input type="radio" name="q5" value="1"> De savoir bénéfice ou perte</label><br>
+<label><input type="radio" name="q5" value="0"> D’acheter des produits</label><br>
+<label><input type="radio" name="q5" value="0"> D’augmenter le capital</label>
+</div>
+
+<div class="q">
+<p>6. La loi 9-88 impose :</p>
+<label><input type="radio" name="q6" value="1"> La tenue de la comptabilité</label><br>
+<label><input type="radio" name="q6" value="0"> La fixation des prix</label><br>
+<label><input type="radio" name="q6" value="0"> La gestion du personnel</label>
+</div>
+
+<div class="q">
+<p>7. Le Plan Comptable Général sert à :</p>
+<label><input type="radio" name="q7" value="1"> Normaliser la comptabilité</label><br>
+<label><input type="radio" name="q7" value="0"> Fixer les salaires</label><br>
+<label><input type="radio" name="q7" value="0"> Calculer les stocks</label>
+</div>
+
+<div class="q">
+<p>8. Les utilisateurs de l’information comptable sont :</p>
+<label><input type="radio" name="q8" value="1"> Dirigeants et partenaires</label><br>
+<label><input type="radio" name="q8" value="0"> Clients uniquement</label><br>
+<label><input type="radio" name="q8" value="0"> Fournisseurs uniquement</label>
+</div>
+
+<div class="q">
+<p>9. Les sources de la comptabilité incluent :</p>
+<label><input type="radio" name="q9" value="1"> Les lois et normes</label><br>
+<label><input type="radio" name="q9" value="0"> Les publicités</label><br>
+<label><input type="radio" name="q9" value="0"> Les réseaux sociaux</label>
+</div>
+
+<div class="q">
+<p>10. L’entreprise doit obligatoirement :</p>
+<label><input type="radio" name="q10" value="1"> Conserver les documents</label><br>
+<label><input type="radio" name="q10" value="0"> Supprimer les archives</label><br>
+<label><input type="radio" name="q10" value="0"> Ignorer les règles</label>
+</div>
+
+<br>
+<button type="button" onclick="corrigerQuiz()">Corriger</button>
+
+</form>
+
+<h3 id="resultat"></h3>
+
+</section>
+<script>
+function corrigerQuiz(){
+    let score = 0;
+    let total = 10;
+
+    for(let i=1;i<=10;i++){
+        let q = document.querySelector('input[name="q'+i+'"]:checked');
+        if(q && q.value == "1"){
+            score++;
+        }
+    }
+
+    let msg = "";
+
+    if(score >= 8){
+        msg = "Excellent 👍";
+    }else if(score >=5){
+        msg = "Niveau moyen ⚠️";
+    }else{
+        msg = "À revoir ❌";
+    }
+
+    document.getElementById("resultat").innerHTML =
+        "Score : " + score + "/" + total + "<br>" + msg;
+}
+</script>
+</section>
+<footer>
+    Formation en comptabilité générale
+<br>
+
+<a href="C1P1M1.html">⬅ Retour </a>
+</footer>
+
+</body>
+</html>
+
