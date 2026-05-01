@@ -1,0 +1,1343 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Le Compte - Comptabilité</title>
+
+<style>
+body{
+    font-family: Arial;
+    margin:0;
+    background:#f4f6f9;
+}
+
+header{
+    background: #c0392b;
+    color:white;
+    padding:20px;
+    text-align:center;
+}
+
+nav{
+    background:#34495e;
+    padding:10px;
+    text-align:center;
+}
+
+nav button{
+    margin:5px;
+    padding:10px 15px;
+    border:none;
+    background:#e74c3c;
+    color:white;
+    cursor:pointer;
+    border-radius:5px;
+    font-size:14px;
+}
+
+nav button:hover{
+    background:#c0392b;
+}
+
+section{
+    display:none;
+    padding:30px;
+    font-size:19px;
+}
+
+.active{
+    display:block;
+}
+
+h2{
+    color:#2c3e50;
+}
+
+h3{
+    color:#e74c3c;
+}
+
+ul{
+    line-height:1.8;
+}
+
+.highlight{
+    background:#fdecea;
+    padding:12px;
+    border-left:5px solid #e74c3c;
+    margin:15px 0;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    margin-top:20px;
+}
+
+td{
+    border:1px solid #444;
+    padding:10px;
+    text-align:center;
+}
+
+footer{
+    text-align:center;
+    padding:10px;
+    background:#2c3e50;
+    color:white;
+}
+</style>
+
+<script>
+function showSection(id){
+    let sections = document.querySelectorAll("section");
+    sections.forEach(sec => sec.classList.remove("active"));
+    document.getElementById(id).classList.add("active");
+}
+</script>
+
+</head>
+
+<body>
+
+<header>
+    <h1>📘 Le Compte</h1>
+</header>
+
+<nav>
+    <button onclick="showSection('def')">Définition</button>
+    <button onclick="showSection('structure')">Structure</button>
+    <button onclick="showSection('solde')">Solde</button>
+    <button onclick="showSection('tenue')">Tenue</button>
+    <button onclick="showSection('fonctionnement')">Fonctionnement</button>
+    <button onclick="showSection('double')">Partie double</button>
+   <button onclick="showSection('EA')">Exemple d'application</button>
+   <button onclick="showSection('EE')">Exercice d’évaluation</button>
+</nav>
+
+<section id="def" class="active">
+    <h2>📘 Définition du compte</h2>
+
+    <p>
+        Le compte est un tableau utilisé pour enregistrer les opérations comptables.
+    </p>
+
+    <div class="highlight">
+        ✔ Il permet de suivre les mouvements (entrées / sorties)<br>
+        ✔ Il enregistre toutes les opérations liées à un élément
+    </div>
+</section>
+
+<section id="structure">
+    <h2>📊 Structure du compte</h2>
+
+    <table>
+        <tr>
+            <td><b>DEBIT (gauche)</b></td>
+            <td><b>CREDIT (droite)</b></td>
+        </tr>
+    </table>
+
+    <ul>
+        <li>Débiter = enregistrer au débit</li>
+        <li>Créditer = enregistrer au crédit</li>
+    </ul>
+
+    <div class="highlight">
+        👉 L’enregistrement d’une opération s’appelle : IMPUTATION
+    </div>
+</section>
+
+<section id="solde">
+    <h2>⚖️ Le solde du compte</h2>
+
+    <p>
+        Le solde est la différence entre le total du débit et du crédit.
+    </p>
+
+    <h3>Cas possibles :</h3>
+
+    <ul>
+        <li><b>Total Débit > Crédit :</b> Solde Débiteur (SD)</li>
+        <li><b>Total Crédit > Débit :</b> Solde Créditeur (SC)</li>
+    </ul>
+
+    <div class="highlight">
+        ✔ Le solde est inscrit du côté opposé pour équilibrer le compte
+    </div>
+</section>
+
+<section id="tenue">
+    <h2>📝 La tenue du compte</h2>
+
+    <p>
+        Un compte doit contenir les informations suivantes :
+    </p>
+
+    <ul>
+        <li>Date des opérations</li>
+        <li>Libellé (description)</li>
+        <li>Montant</li>
+        <li>Solde</li>
+    </ul>
+
+    <div class="highlight">
+        👉 La présentation peut varier mais les informations restent obligatoires :
+        <ul>
+        <li>Compte à colonnes regroupées ou mariées </li>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Facture</title>
+
+<style>
+body{
+    font-family: Arial;
+    background:#f4f6f9;
+    padding:20px;
+}
+
+/* Tableau principal */
+table{
+    width:80%;
+    margin:auto;
+    border-collapse:collapse;
+    border:3px solid black; /* Bordure extérieure épaisse */
+}
+
+/* Cellules */
+td{
+    border:1px solid black; /* Bordures internes */
+    padding:10px;
+}
+
+/* Styles */
+.titre{
+    text-align:center;
+    font-size:26px;
+    font-weight:bold;
+}
+
+.right{
+    text-align:right;
+}
+
+.center{
+    text-align:center;
+}
+
+.bold{
+    font-weight:bold;
+}
+
+.header{
+    background:#e6e6e6;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<table>
+
+<tr class="header">
+    <td colspan="2" class="bold">Dates</td>
+    <td class="bold center">Libellés</td>
+<td class="bold center">Débit</td>
+<td class="bold center">Crédit</td>
+
+</tr>
+
+<tr>
+        <td colspan="2" class="bold"></td>
+    <td class="bold center"></td>
+<td class="bold center"></td>
+<td class="bold center"></td>
+</tr>
+<tr>
+        <td colspan="2" class="bold">Totaux</td>
+    <td class="bold center"></td>
+<td class="bold center"></td>
+<td class="bold center"></td>
+</tr>
+
+</table>
+
+</body>
+</html>
+
+        <li>Compte à colonnes séparées</li>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Facture</title>
+
+<style>
+body{
+    font-family: Arial;
+    background:#f4f6f9;
+    padding:20px;
+}
+
+/* Tableau principal */
+table{
+    width:80%;
+    margin:auto;
+    border-collapse:collapse;
+    border:3px solid black; /* Bordure extérieure épaisse */
+}
+
+/* Cellules */
+td{
+    border:1px solid black; /* Bordures internes */
+    padding:10px;
+}
+
+/* Styles */
+.titre{
+    text-align:center;
+    font-size:26px;
+    font-weight:bold;
+}
+
+.right{
+    text-align:right;
+}
+
+.center{
+    text-align:center;
+}
+
+.bold{
+    font-weight:bold;
+}
+
+.header{
+    background:#e6e6e6;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<table>
+
+<tr class="header">
+    <td colspan="2" class="bold">Dates</td>
+    <td class="bold center">Libellés</td>
+<td class="bold center">Débit</td>
+<td class="bold center">Dates</td>
+<td class="bold center">Libellés</td>
+<td class="bold center">Crédit</td>
+
+</tr>
+
+<tr>
+        <td colspan="2" class="bold"></td>
+    <td class="bold center"></td>
+<td class="bold center"></td>
+<td class="bold center"></td>
+<td class="bold center"></td>
+<td class="bold center"></td>
+
+</tr>
+<tr>
+        <td colspan="2" class="bold">♣♣♣♣♣</td>
+    <td class="bold center">Totaux</td>
+<td class="bold center"></td>
+<td class="bold center">♣♣♣♣♣</td>
+<td class="bold center">Totaux</td>
+<td class="bold center"></td>
+
+</tr>
+
+</table>
+
+</body>
+</html>
+
+        <li>Compte schématique (sous forme "T")</li>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Compte en T</title>
+
+<style>
+body{
+    font-family: Arial;
+    margin:40px;
+}
+
+table{
+    width:400px;
+    border-collapse:collapse;
+    margin:auto;
+}
+
+th, td{
+    border:2px solid black;
+    height:40px;
+    text-align:center;
+}
+
+.titre{
+    font-weight:bold;
+    background:#f2f2f2;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<h2 style="text-align:center;">Compte : __________</h2>
+
+<table>
+<tr>
+<th>Débit</th>
+<th>Crédit</th>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+</tr>
+
+</table>
+
+</body>
+</html>
+    </ul>
+    </div>
+</section>
+
+<section id="fonctionnement">
+    <h2>📚 Fonctionnement des comptes du bilan</h2>
+
+    <h3>Comptes d’actif :</h3>
+    <ul>
+        <li>Augmentation → Débit</li>
+        <li>Diminution → Crédit</li>
+    </ul>
+
+    <h3>Comptes de passif :</h3>
+    <ul>
+        <li>Augmentation → Crédit</li>
+        <li>Diminution → Débit</li>
+    </ul>
+
+    <div class="highlight">
+        ✔ Le fonctionnement dépend de la nature du compte
+    </div>
+</section>
+
+<section id="double">
+    <h2>🔁 Principe de la partie double</h2>
+
+    <p>
+        Chaque opération affecte au moins deux comptes :
+    </p>
+
+    <ul>
+        <li>Un compte est débité</li>
+        <li>Un autre compte est crédité</li>
+    </ul>
+
+    <div class="highlight">
+        ⚖️ Total Débit = Total Crédit
+    </div>
+
+    <p>
+        👉 Cela garantit l’équilibre de la comptabilité.
+    </p>
+</section>
+<section id="EA">
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>📘 EXERCICE : COMPTE ET BILAN</h1>
+
+<p>
+La situation patrimoniale de l’entreprise <strong>« SOLEIL.SARL »</strong>, créée le <strong>01/04/2025</strong>, se présente comme suit :
+</p>
+
+<ul>
+<li>Matériel : 450 000 MAD</li>
+<li>Caisse : 50 000 MAD</li>
+<li>Clients : 150 000 MAD</li>
+<li>Banque : 400 000 MAD</li>
+<li>Fournisseurs : 200 000 MAD</li>
+<li>Stock de marchandises : 350 000 MAD</li>
+<li>Local  : 600 000 MAD</li>
+<li>Emprunt : 400 000 MAD</li>
+<li>Capital : à déterminer</li>
+</ul>
+
+<h2>📅 Opérations du mois d’avril :</h2>
+
+<ul>
+<li>01/04 : Achat de marchandises 80 000 MAD (1/2 banque, reste à crédit) </li>
+<li>05/04 : Vente de marchandises 100 000 MAD (1/2 en espèces, reste à crédit) </li>
+<li>07/04 : Intérêts payés à la banque 25 000 MAD</li>
+<li>08/04 : Encaissement client par chèque bancaire 35 000 MAD</li>
+<li>12/04 : Règlement par chèque bancaire des frais de Publicité 3 000 MAD</li>
+<li>28/04 : Règlement d’une dette fournisseur par chèque bancaire 30 000 MAD</li>
+<li>30/04 : Stock final : 360 000 MAD</li>
+
+</ul>
+
+<h2>📝 Travail à faire :</h2>
+<ol>
+<li>Établir le bilan initial</li>
+<li>Présenter les comptes schématiques</li>
+<li>Établir le bilan final </li>
+</ol>
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Correction Comptabilité</title>
+
+<style>
+body{
+    font-family: Arial;
+    background:#f4f6f9;
+    padding:20px;
+}
+
+.container{
+    max-width:1100px; 
+    margin:auto;
+    background:white;
+    padding:20px;
+    box-shadow:0 0 10px rgba(0,0,0,0.1);
+}
+
+h1,h2{
+    text-align:center;
+    color:#2c3e50;
+}
+
+table{
+    border-collapse:collapse;
+    margin:20px auto;
+    width:90%;
+}
+
+th,td{
+    border:1px solid black;
+    padding:8px;
+    text-align:center;
+}
+
+th{
+    background:#d5e8d4;
+}
+
+.compte{
+    width:300px;
+    margin:15px;
+    display:inline-block;
+    vertical-align:top;
+}
+
+.titre{
+    text-align:center;
+    font-weight:bold;
+    margin-bottom:5px;
+}
+
+.highlight{
+    background:#eafaf1;
+    padding:10px;
+    border-left:5px solid #16a085;
+    margin-top:20px;
+}
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>✅ CORRECTION</h1>
+<h2>1. Bilan initial au 01/04/2025</h2>
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Bilan initial</title>
+
+<style>
+body{
+    font-family: "Times New Roman", serif;
+    margin:20px;
+}
+
+/* Tableau */
+table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+/* Colonnes */
+col.large { width:45%; }
+col.small { width:5%; }
+
+/* Cellules */
+th, td{
+    border:1px solid black;
+    padding:6px;
+}
+
+/* Titre */
+.title{
+    font-weight:bold;
+    text-align:center;
+    font-size:20px;
+}
+
+/* Alignement */
+.montant{
+    text-align:right;
+    white-space:nowrap;
+}
+
+/* Gras */
+.bold{
+    font-weight:bold;
+}
+
+/* Retraits (hiérarchie) */
+.lvl1{ padding-left:10px; }
+.lvl2{ padding-left:25px; }
+.lvl3{ padding-left:40px; }
+.lvl4{ padding-left:55px; }
+td:nth-child(1),
+td:nth-child(3),
+th:nth-child(1),
+th:nth-child(3){
+    text-align:left;
+}
+</style>
+
+</head>
+
+<body>
+<h1>✅ CORRECTION</h1>
+<h2>1. Bilan initial au 01/04/2025</h2>
+
+<table>
+
+<colgroup>
+    <col class="large">
+    <col class="small">
+    <col class="large">
+    <col class="small">
+</colgroup>
+
+<tr>
+    <td colspan="4" class="title">
+        Bilan initial (ou de démarrage) au 01/04/2025
+    </td>
+</tr>
+
+<tr class="bold">
+    <td>ACTIF</td>
+    <td>Montant</td>
+    <td>PASSIF</td>
+    <td>Montant</td>
+</tr>
+
+<tr>
+    <td class="bold lvl1">2 ACTIF IMMOBILISE</td>
+    <td></td>
+    <td class="bold lvl1">1 FINANCEMENT PERMANENT</td>
+    <td></td>
+</tr>
+
+<tr>
+    <td class="bold lvl2">23 IMMOBILISATIONS CORPORELLES</td>
+    <td></td>
+    <td class="bold lvl2">11 CAPITAUX PROPRES</td>
+    <td></td>
+</tr>
+
+<tr>
+    <td class="lvl3">232 Constructions</td>
+    <td></td>
+    <td class="lvl3">111 Capital social ou personnel</td>
+    <td></td>
+</tr>
+
+<tr>
+    <td class="lvl4">2321 Bâtiments</td>
+    <td class="montant">600.000,00</td>
+    <td class="lvl4">1111 Capital social</td>
+    <td class="montant">1.400.000,00</td>
+</tr>
+
+<tr>
+    <td class="lvl3">233 ITMO</td>
+    <td></td>
+    <td class="bold lvl2">14 DETTES DE FINANCEMENT</td>
+    <td></td>
+</tr>
+
+<tr>
+    <td class="lvl4">2332 Matériel et outillage</td>
+    <td class="montant">450.000,00</td>
+    <td class="lvl3">148 Autres dettes de financement</td>
+    <td></td>
+</tr>
+
+<tr>
+    <td></td>
+    <td></td>
+    <td class="lvl4">1481 Emprunts auprès des EC</td>
+    <td class="montant">400.000,00</td>
+</tr>
+
+<tr>
+    <td class="bold lvl1">3 ACTIF CIRCULANT</td>
+    <td></td>
+    <td class="bold lvl1">4 PASSIF CIRCULANT</td>
+    <td></td>
+</tr>
+
+<tr>
+    <td class="bold lvl2">31 STOCKS</td>
+    <td></td>
+    <td class="bold lvl2">44 DETTES DU PASSIF CIRCULANT</td>
+    <td></td>
+</tr>
+
+<tr>
+    <td class="lvl3">311 Marchandises</td>
+    <td></td>
+    <td class="lvl3">441 Fournisseurs et CR</td>
+    <td></td>
+</tr>
+
+<tr>
+    <td class="lvl4">3111 Marchandises</td>
+    <td class="montant">350.000,00</td>
+    <td class="lvl4">4411 Fournisseurs</td>
+    <td class="montant">200.000,00</td>
+</tr>
+
+<tr>
+    <td class="bold lvl2">34 CREANCES DE L'ACTIF CIRCULANT</td>
+    <td></td>
+    <td></td>
+    <td></td>
+</tr>
+
+<tr>
+    <td class="lvl3">342 Clients et CR</td>
+    <td></td>
+    <td></td>
+    <td></td>
+</tr>
+
+<tr>
+    <td class="lvl4">3421 Clients</td>
+    <td class="montant">150.000,00</td>
+    <td></td>
+    <td></td>
+</tr>
+
+<tr>
+    <td class="bold lvl1">5 TRESORERIE</td>
+    <td></td>
+    <td></td>
+    <td></td>
+</tr>
+
+<tr>
+    <td class="bold lvl2">51 TRESORERIE-ACTIF</td>
+    <td></td>
+    <td></td>
+    <td></td>
+</tr>
+
+<tr>
+    <td class="lvl3">514 Banques, TG et CP</td>
+    <td></td>
+    <td></td>
+    <td></td>
+</tr>
+
+<tr>
+    <td class="lvl4">5141 Banques (SD)</td>
+    <td class="montant">400.000,00</td>
+    <td></td>
+    <td></td>
+</tr>
+
+<tr>
+    <td class="lvl3">516 Caisses, RA et A</td>
+    <td></td>
+    <td></td>
+    <td></td>
+</tr>
+
+<tr>
+    <td class="lvl4">5161 Caisses</td>
+    <td class="montant">50.000,00</td>
+    <td></td>
+    <td></td>
+</tr>
+
+<tr class="bold">
+    <td>Total</td>
+    <td class="montant">2.000.000,00</td>
+    <td>Total</td>
+    <td class="montant">2.000.000,00</td>
+</tr>
+
+</table>
+
+</body>
+</html>
+<h2>2. Comptes schématiques (en T)</h2>
+
+<div>
+
+               
+<!--2321 Bâtiments-->
+<div class="compte">
+<div class="titre">2321 Bâtiments</div>
+<table>
+<tr><th>Débit</th><th>Crédit</th></tr>
+<tr><td>600 000</td><td></td></tr>
+<tr><td><strong> </strong></td><td> SD = 600 000</td></tr>
+<tr><td><strong>Total 600 000 </strong></td><td> Total 600 000</td></tr>
+
+</table>
+</div>
+<!--2332 Matériel et outillage-->
+<div class="compte">
+<div class="titre">2332 Matériel et outillage</div>
+<table>
+<tr><th>Débit</th><th>Crédit</th></tr>
+<tr><td>450 000</td><td></td></tr>
+<tr><td><strong> </strong></td><td> SD = 450 000</td></tr>
+<tr><td><strong>Total 450 000 </strong></td><td> Total 450 000</td></tr>
+
+</table>
+</div>
+<!--3111 Marchandises-->
+<div class="compte">
+<div class="titre">3111 Marchandises</div>
+<table>
+<tr><th>Débit</th><th>Crédit</th></tr>
+<tr><td>350 000</td><td></td></tr>
+<tr><td></td><td>350 000</td></tr>
+<tr><td>360 000</td><td></td></tr>
+<tr><td><strong> </strong></td><td> SD = 360 000</td></tr>
+<tr><td><strong>Total 710 000 </strong></td><td> Total 710 000</td></tr>
+
+</table>
+</div>
+<!--3421 Clients-->
+<div class="compte">
+<div class="titre">3421 Clients</div>
+<table>
+<tr><th>Débit</th><th>Crédit</th></tr>
+<tr><td>150 000</td><td></td></tr>
+<tr><td>50 000</td><td></td></tr>
+<tr><td></td><td>35 000</td></tr>
+<tr><td><strong> </strong></td><td> SD = 165 000</td></tr>
+<tr><td><strong>Total 200 000 </strong></td><td> Total 200 000</td></tr>
+
+</table>
+</div>
+<!--5141 Banques (SD)-->
+<div class="compte">
+<div class="titre">5141 Banques (SD)</div>
+<table>
+<tr><th>Débit</th><th>Crédit</th></tr>
+<tr><td>400 000</td><td></td></tr>
+<tr><td></td><td> 40 000 </td></tr>
+<tr><td></td><td> 25 000 </td></tr>
+<tr><td>35 000</td><td> </td></tr>
+<tr><td></td><td> 3 000</td></tr>
+<tr><td></td><td> 30 000</td></tr>
+<tr><td><strong> </strong></td><td> SD = 337 000</td></tr>
+<tr><td><strong>Total 435 000 </strong></td><td> Total 435 000</td></tr>
+
+</table>
+</div>
+<!--5161 Caisses-->
+<div class="compte">
+<div class="titre">5161 Caisses</div>
+<table>
+<tr><th>Débit</th><th>Crédit</th></tr>
+<tr><td>50 000</td><td></td></tr>
+<tr><td>50 000</td><td></td></tr>
+<tr><td><strong> </strong></td><td> SD = 100 000</td></tr>
+<tr><td><strong>Total 100 000 </strong></td><td> Total 100 000</td></tr>
+
+</table>
+</div>
+
+<!--1111 Capital social-->
+<div class="compte">
+<div class="titre">1111 Capital social</div>
+<table>
+<tr><th>Débit</th><th>Crédit</th></tr>
+<tr><td></td><td>1 400 000</td></tr>
+<tr><td> SC 1 400 000<strong> </strong></td><td></td></tr>
+<tr><td><strong>Total  1 400 000 </strong></td><td> Total 1 400 000</td></tr>
+
+</table>
+</div>
+<!--1481 Emprunts auprès des EC-->
+<div class="compte">
+<div class="titre">1481 Emprunts auprès des EC</div>
+<table>
+<tr><th>Débit</th><th>Crédit</th></tr>
+<tr><td></td><td> 400 000</td></tr>
+<tr><td> SC  400 000<strong> </strong></td><td></td></tr>
+<tr><td><strong>Total   400 000 </strong></td><td> Total 400 000</td></tr>
+
+</table>
+</div>
+<!--4411 Fournisseurs-->
+<div class="compte">
+<div class="titre">4411 Fournisseurs</div>
+<table>
+<tr><th>Débit</th><th>Crédit</th></tr>
+<tr><td></td><td> 200 000</td></tr>
+<tr><td></td><td> 40 000</td></tr>
+<tr><td>30 000</td><td> </td></tr>
+<tr><td> SC  210 000<strong> </strong></td><td></td></tr>
+<tr><td><strong>Total   240 000 </strong></td><td> Total 240 000</td></tr>
+
+</table>
+</div>
+
+
+</div>
+
+<h2>3. Bilan final au 30/04/2025 </h2>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Bilan initial</title>
+
+<style>
+body{
+    font-family:"Times New Roman", serif;
+    margin:20px;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+col.large { width:45%; }
+col.small { width:5%; }
+
+th, td{
+    border:1px solid black;
+    padding:6px;
+}
+
+/* Alignement */
+td:nth-child(1),
+td:nth-child(3),
+th:nth-child(1),
+th:nth-child(3){
+    text-align:left;
+}
+
+.montant{
+    text-align:right;
+}
+
+/* Styles */
+.title{
+    text-align:center;
+    font-weight:bold;
+    font-size:20px;
+}
+
+.bold{
+    font-weight:bold;
+}
+
+.lvl1{padding-left:10px;}
+.lvl2{padding-left:25px;}
+.lvl3{padding-left:40px;}
+.lvl4{padding-left:55px;}
+
+/* Surbrillance jaune */
+.highlight{
+    background:#ffc000;
+    font-weight:bold;
+}
+</style>
+
+</head>
+
+<body>
+
+<table>
+
+<colgroup>
+    <col class="large">
+    <col class="small">
+    <col class="large">
+    <col class="small">
+</colgroup>
+
+<tr>
+    <td colspan="4" class="title">
+        Bilan final au 30/04/2025
+    </td>
+</tr>
+
+<tr class="bold">
+    <td>ACTIF</td>
+    <td>Montant</td>
+    <td>PASSIF</td>
+    <td>Montant</td>
+</tr>
+
+<tr>
+    <td class="bold lvl1">2 ACTIF IMMOBILISE</td>
+    <td></td>
+    <td class="bold lvl1">1 FINANCEMENT PERMANENT</td>
+    <td></td>
+</tr>
+
+<tr>
+    <td class="bold lvl2">23 IMMOBILISATIONS CORPORELLES</td>
+    <td></td>
+    <td class="bold lvl2">11 CAPITAUX PROPRES</td>
+    <td></td>
+</tr>
+
+<tr>
+    <td class="lvl3">232 Constructions</td>
+    <td></td>
+    <td class="lvl3">111 Capital social ou personnel</td>
+    <td></td>
+</tr>
+
+<tr>
+    <td class="lvl4">2321 Bâtiments</td>
+    <td class="montant">600.000,00</td>
+    <td class="lvl4">1111 Capital social</td>
+    <td class="montant">1.400.000,00</td>
+</tr>
+
+<tr>
+    <td class="lvl3">233 ITMO</td>
+    <td></td>
+    <td class="lvl3 highlight">119 Résultat net de l'exercice</td>
+    <td class="highlight"></td>
+</tr>
+
+<tr>
+    <td class="lvl4">2332 Matériel et outillage</td>
+    <td class="montant">450.000,00</td>
+    <td class="lvl4 highlight">1191 Résultat net de l'exercice (SC)</td>
+    <td class="montant highlight">2.000,00</td>
+</tr>
+
+<tr>
+    <td></td>
+    <td></td>
+    <td class="bold lvl2">14 DETTES DE FINANCEMENT</td>
+    <td></td>
+</tr>
+
+<tr>
+    <td></td>
+    <td></td>
+    <td class="lvl3">148 Autres dettes de financement</td>
+    <td></td>
+</tr>
+
+<tr>
+    <td></td>
+    <td></td>
+    <td class="lvl4">1481 Emprunts auprès des EC</td>
+    <td class="montant">400.000,00</td>
+</tr>
+
+<tr>
+    <td class="bold lvl1">3 ACTIF CIRCULANT</td>
+    <td></td>
+    <td class="bold lvl1">4 PASSIF CIRCULANT</td>
+    <td></td>
+</tr>
+
+<tr>
+    <td class="bold lvl2">31 STOCKS</td>
+    <td></td>
+    <td class="bold lvl2">44 DETTES DU PASSIF CIRCULANT</td>
+    <td></td>
+</tr>
+
+<tr>
+    <td class="lvl3">311 Marchandises</td>
+    <td></td>
+    <td class="lvl3">441 Fournisseurs et CR</td>
+    <td></td>
+</tr>
+
+<tr>
+    <td class="lvl4">3111 Marchandises</td>
+    <td class="montant">360.000,00</td>
+    <td class="lvl4">4411 Fournisseurs</td>
+    <td class="montant">210.000,00</td>
+</tr>
+
+<tr>
+    <td class="bold lvl2">34 CREANCES DE L'ACTIF CIRCULANT</td>
+    <td></td>
+    <td></td>
+    <td></td>
+</tr>
+
+<tr>
+    <td class="lvl3">342 Clients et CR</td>
+    <td></td>
+    <td></td>
+    <td></td>
+</tr>
+
+<tr>
+    <td class="lvl4">3421 Clients</td>
+    <td class="montant">165.000,00</td>
+    <td></td>
+    <td></td>
+</tr>
+
+<tr>
+    <td class="bold lvl1">5 TRESORERIE</td>
+    <td></td>
+    <td></td>
+    <td></td>
+</tr>
+
+<tr>
+    <td class="bold lvl2">51 TRESORERIE-ACTIF</td>
+    <td></td>
+    <td></td>
+    <td></td>
+</tr>
+
+<tr>
+    <td class="lvl3">514 Banques, TG et CP</td>
+    <td></td>
+    <td></td>
+    <td></td>
+</tr>
+
+<tr>
+    <td class="lvl4">5141 Banques (SD)</td>
+    <td class="montant">337.000,00</td>
+    <td></td>
+    <td></td>
+</tr>
+
+<tr>
+    <td class="lvl3">516 Caisses, RA et A</td>
+    <td></td>
+    <td></td>
+    <td></td>
+</tr>
+
+<tr>
+    <td class="lvl4">5161 Caisses</td>
+    <td class="montant">100.000,00</td>
+    <td></td>
+    <td></td>
+</tr>
+
+<tr class="bold">
+    <td>Total</td>
+    <td class="montant">2.012.000,00</td>
+    <td>Total</td>
+    <td class="montant">2.012.000,00</td>
+</tr>
+
+</table>
+
+</body>
+</html>
+<div class="highlight">
+💡 <strong>Conseil :</strong> Toujours vérifier que le bilan est équilibré.
+</div>
+
+</div>
+
+</body>
+</html>
+
+</section>
+<section id="EE">
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Exercice Comptabilité Générale</title>
+
+<style>
+body{
+    font-family: Arial;
+    background:#f4f6f9;
+    padding:20px;
+}
+
+.container{
+    max-width:1000px;
+    margin:auto;
+    background:white;
+    padding:20px;
+    box-shadow:0 0 10px rgba(0,0,0,0.1);
+}
+
+h1,h2{
+    text-align:center;
+    color:#2c3e50;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    margin-top:20px;
+}
+
+td,th{
+    border:1px solid #444;
+    padding:8px;
+    text-align:center;
+}
+
+th{
+    background:#d5e8d4;
+}
+
+.correction{
+    background:#eafaf1;
+    padding:15px;
+    margin-top:30px;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>📘 EXERCICE : COMPTE ET BILAN</h1>
+
+<p>
+La situation patrimoniale de l’entreprise <strong>« SOLEIL.SARL »</strong>, créée le <strong>01/05/2025</strong>, se présente comme suit :
+</p>
+
+<ul>
+<li>Matériel et outillage : 25 000 MAD</li>
+<li>Matériel de bureau : 12 000 MAD</li>
+<li>Caisse : 6 000 MAD</li>
+<li>Clients : 15 000 MAD</li>
+<li>Banque : 40 000 MAD</li>
+<li>Fournisseurs : 8 000 MAD</li>
+<li>Stock de marchandises : 25 000 MAD</li>
+<li>Local commercial : 220 000 MAD</li>
+<li>Emprunt : 60 000 MAD</li>
+<li>Capital : à déterminer</li>
+</ul>
+
+<h2>📅 Opérations du mois de mai :</h2>
+
+<ul>
+<li>01/05 : Achat de marchandises 8 000 MAD (1/2 banque, reste à crédit) </li>
+<li>03/05 : Dépôt caution 4 000 MAD par chèque</li>
+<li>05/05 : Vente de marchandises 10 000 MAD (1/2 banque, reste caisse) </li>
+<li>07/05 : Intérêts bancaires reçus 2 500 MAD</li>
+<li>08/05 : Encaissement d’une créance client en espèces 3 500 MAD</li>
+<li>12/05 : Paiement frais de Publicité par chèque bancaire 3 000 MAD</li>
+<li>14/05 : Paiement frais de Transport en espèces 1 800 MAD</li>
+<li>18/05 : Remboursement d’une fraction de l’emprunt 20 000 MAD</li>
+<li>20/05 : Achat Timbres fiscaux en espèces 1 200 MAD</li>
+<li>22/05 : Paiement frais de Réparation en espèces 2 000 MAD</li>
+<li>24/05 : Vente de marchandises par chèque bancaire 7 000 MAD </li>
+<li>28/05 : Règlement d’une dette fournisseur par chèque bancaire3 000 MAD</li>
+<li>30/05 : Versement en banque 4 000 MAD</li>
+<li>30/05 : Règlement Salaires par virement bancaire 20 000 MAD</li>
+<li>31/05 : Stock final : 45 000 MAD</li>
+</ul>
+
+<h2>📝 Travail à faire :</h2>
+<ol>
+<li>Établir le bilan initial</li>
+<li>Présenter les comptes schématiques</li>
+<li>Établir le bilan final </li>
+</ol>
+
+</div>
+
+</body>
+</html>
+
+</section>
+
+<footer>
+    Formation en comptabilité générale
+<br>
+
+<a href="C1P1M1.html">⬅ Retour </a>
+
+</footer>
+
+</body>
+</html>
+
+
+
+
+
