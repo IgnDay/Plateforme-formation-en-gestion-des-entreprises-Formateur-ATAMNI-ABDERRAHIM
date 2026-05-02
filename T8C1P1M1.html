@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Organisation Comptable</title>
+
+<style>
+body{
+    font-family: Arial;
+    margin:0;
+    background:#f4f6f9;
+}
+
+header{
+    background:#2c3e50;
+    color:white;
+    padding:20px;
+    text-align:center;
+}
+
+nav{
+    background:#34495e;
+    padding:10px;
+    text-align:center;
+}
+
+nav button{
+    margin:5px;
+    padding:10px 15px;
+    border:none;
+    background:#6c5ce7;
+    color:white;
+    cursor:pointer;
+    border-radius:5px;
+    font-size:14px;
+}
+
+nav button:hover{
+    background:#5a4bd1;
+}
+
+section{
+    display:none;
+    padding:30px;
+    font-size:19px;
+}
+
+.active{
+    display:block;
+}
+
+h2{
+    color:#2c3e50;
+}
+
+h3{
+    color:#6c5ce7;
+}
+
+ul{
+    line-height:1.8;
+}
+
+.highlight{
+    background:#f0efff;
+    padding:12px;
+    border-left:5px solid #6c5ce7;
+    margin:15px 0;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    margin-top:20px;
+}
+
+td{
+    border:1px solid #444;
+    padding:10px;
+    text-align:center;
+}
+
+footer{
+    text-align:center;
+    padding:10px;
+    background:#2c3e50;
+    color:white;
+}
+</style>
+
+<script>
+function showSection(id){
+    let sections = document.querySelectorAll("section");
+    sections.forEach(sec => sec.classList.remove("active"));
+    document.getElementById(id).classList.add("active");
+}
+</script>
+
+</head>
+
+<body>
+
+<header>
+    <h1>📘 L’Organisation Comptable</h1>
+</header>
+
+<nav>
+    <button onclick="showSection('importance')">Importance</button>
+    <button onclick="showSection('def')">Définition</button>
+    <button onclick="showSection('pieces')">Pièces</button>
+    <button onclick="showSection('documents')">Documents</button>
+    <button onclick="showSection('systeme')">Système</button>
+    <button onclick="showSection('EE')">Exercice d’évaluation</button>
+</nav>
+
+<section id="importance" class="active">
+    <h2>🎯 Importance de l’organisation comptable</h2>
+
+    <p>
+        Une entreprise réalise plusieurs opérations (achats, ventes, paiements…).
+    </p>
+
+    <div class="highlight">
+        ✔ Il est essentiel d’enregistrer ces opérations de manière organisée
+    </div>
+
+    <ul>
+        <li>Assurer un suivi précis des opérations</li>
+        <li>Éviter les erreurs</li>
+        <li>Faciliter le contrôle</li>
+        <li>Produire des informations fiables</li>
+    </ul>
+</section>
+
+<section id="def">
+    <h2>📘 Définition de l’organisation comptable</h2>
+
+    <p>
+        L’organisation comptable est l’ensemble des moyens utilisés pour enregistrer,
+        classer et présenter les informations financières.
+    </p>
+
+    <div class="highlight">
+        ✔ Basée sur des pièces comptables<br>
+        ✔ Et des documents comptables
+    </div>
+</section>
+
+<section id="pieces">
+    <h2>📄 Les pièces comptables</h2>
+
+    <p>
+        Ce sont les documents qui justifient les opérations comptables.
+    </p>
+
+    <h3>Exemples :</h3>
+    <ul>
+        <li>Factures</li>
+        <li>Chèques</li>
+        <li>Bons de caisse</li>
+        <li>Quittances</li>
+    </ul>
+
+    <div class="highlight">
+        ✔ Elles sont la base de l’information comptable
+    </div>
+</section>
+
+<section id="documents">
+    <h2>📚 Les documents comptables</h2>
+
+    <p>
+        Ils permettent de classer et synthétiser les opérations.
+    </p>
+
+    <h3>Principaux documents :</h3>
+    <ul>
+        <li>Journal</li>
+        <li>Grand livre</li>
+        <li>Balance</li>
+        <li>Bilan</li>
+        <li>CPC</li>
+    </ul>
+
+    <div class="highlight">
+        ✔ Ils permettent d’analyser la situation financière
+    </div>
+</section>
+
+<section id="systeme">
+    <h2>⚙️ Le système comptable </h2>
+
+    <p>
+        Le système comptable suit plusieurs étapes :
+    </p>
+
+    <table>
+        <tr><td>1</td><td>Collecte des pièces comptables</td></tr>
+        <tr><td>2</td><td>Enregistrement dans le journal</td></tr>
+        <tr><td>3</td><td>Report au grand livre</td></tr>
+        <tr><td>4</td><td>Établissement de la balance</td></tr>
+        <tr><td>5</td><td>Établissement du bilan</td></tr>
+        <tr><td>6</td><td>Établissement du CPC</td></tr>
+    </table>
+
+    <div class="highlight">
+        ✔ Ce système garantit une comptabilité organisée et fiable
+    </div>
+</section>
+<section id="EE">
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Vrai/Faux - Organisation Comptable</title>
+
+
+</head>
+
+<body>
+
+<header>
+<h1>📘 Vrai / Faux - Organisation Comptable</h1>
+</header>
+
+<div class="container">
+
+<div id="quiz"></div>
+
+<button onclick="corriger()">✅ Corriger</button>
+
+<h2 id="score"></h2>
+
+</div>
+
+<script>
+
+document.addEventListener("DOMContentLoaded", function(){
+
+const questions = [
+
+{q:"1. L’organisation comptable permet d’assurer un enregistrement structuré des opérations.", answer:true},
+
+{q:"2. Les pièces comptables servent uniquement à calculer le résultat.", answer:false},
+
+{q:"3. Les factures et chèques sont des pièces comptables.", answer:true},
+
+{q:"4. Le journal et le grand livre sont des documents comptables.", answer:true},
+
+{q:"5. La balance permet de vérifier l’égalité entre débit et crédit.", answer:true},
+
+{q:"6. Le système comptable commence par l’établissement du bilan.", answer:false},
+
+{q:"7. Une bonne organisation comptable réduit les risques d’erreurs.", answer:true},
+
+{q:"8. Les documents comptables ne servent pas à l’analyse financière.", answer:false},
+
+{q:"9. Le CPC fait partie des documents de synthèse.", answer:true},
+
+{q:"10. L’organisation comptable n’a aucun impact sur la fiabilité des informations.", answer:false}
+
+];
+
+const quizDiv = document.getElementById("quiz");
+
+// Génération des questions
+questions.forEach((q,i)=>{
+let bloc = document.createElement("div");
+bloc.className="question";
+
+bloc.innerHTML = `
+<p>${q.q}</p>
+
+<label><input type="radio" name="q${i}" value="true"> Vrai</label>
+<label><input type="radio" name="q${i}" value="false"> Faux</label>
+
+<p id="res${i}"></p>
+`;
+
+quizDiv.appendChild(bloc);
+});
+
+// Correction
+window.corriger = function(){
+let score = 0;
+
+questions.forEach((q,i)=>{
+let rep = document.querySelector(`input[name="q${i}"]:checked`);
+let res = document.getElementById(`res${i}`);
+
+if(rep){
+if((rep.value === "true") === q.answer){
+res.innerHTML="✔ Bonne réponse";
+res.className="correct";
+score++;
+}else{
+res.innerHTML="❌ Mauvaise réponse";
+res.className="wrong";
+}
+}else{
+res.innerHTML="⚠ Non répondu";
+res.className="wrong";
+}
+});
+
+document.getElementById("score").innerHTML="🎯 Score : "+score+"/10";
+};
+
+});
+
+</script>
+
+</body>
+</html>
+</section>
+<footer>
+    Formation en comptabilité générale
+<br>
+
+<a href="C1P1M1.html">⬅ Retour </a>
+
+</footer>
+
+</body>
+</html>
