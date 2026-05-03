@@ -1,0 +1,1038 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Le Journal Comptable</title>
+
+<style>
+body{
+    font-family: Arial;
+    margin:0;
+    background:#f4f6f9;
+}
+
+header{
+    background:#f4f6f9;
+    color:#444;
+    padding:20px;
+    text-align:center;
+}
+
+nav{
+    background:#34495e;
+    padding:10px;
+    text-align:center;
+}
+
+nav button{
+    margin:5px;
+    padding:10px 15px;
+    border:none;
+    background:#e84393;
+    color:white;
+    cursor:pointer;
+    border-radius:5px;
+    font-size:14px;
+}
+
+nav button:hover{
+    background:#c2185b;
+}
+
+section{
+    display:none;
+    padding:30px;
+    font-size:19px;
+}
+
+.active{
+    display:block;
+}
+
+h2{
+    color:#2c3e50;
+}
+
+h3{
+    color:#e84393;
+}
+
+ul{
+    line-height:1.8;
+}
+
+.highlight{
+    background:#fde4ef;
+    padding:12px;
+    border-left:5px solid #e84393;
+    margin:15px 0;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    margin-top:20px;
+}
+
+td{
+    border:1px solid #444;
+    padding:10px;
+    text-align:center;
+}
+
+footer{
+    text-align:center;
+    padding:10px;
+    background:#2c3e50;
+    color:white;
+}
+</style>
+
+<script>
+function showSection(id){
+    let sections = document.querySelectorAll("section");
+    sections.forEach(sec => sec.classList.remove("active"));
+    document.getElementById(id).classList.add("active");
+}
+</script>
+
+</head>
+
+<body>
+
+<header>
+    <h1>📘 Le Journal Comptable</h1>
+</header>
+
+<nav>
+    <button onclick="showSection('def')">Définition</button>
+    <button onclick="showSection('utilite')">Utilité</button>
+    <button onclick="showSection('obligation')">Obligations</button>
+    <button onclick="showSection('presentation')">Présentation</button>
+   <button onclick="showSection('EA')">Exemple d'application</button>
+   <button onclick="showSection('EE')">Exercice d’évaluation</button>
+
+</nav>
+
+<section id="def" class="active">
+    <h2>📘 Définition du journal</h2>
+
+    <p>
+        Le journal est un registre comptable dans lequel toutes les opérations 
+        de l’entreprise sont enregistrées par ordre chronologique.
+    </p>
+
+    <div class="highlight">
+        ✔ Enregistrement chronologique<br>
+        ✔ Suivi des opérations<br>
+        ✔ Base de la comptabilité
+    </div>
+</section>
+
+<section id="utilite">
+    <h2>🎯 Utilité du journal</h2>
+
+    <ul>
+        <li>Suivre toutes les opérations réalisées</li>
+        <li>Contrôler les enregistrements comptables</li>
+        <li>Assurer la transparence</li>
+        <li>Faciliter la vérification</li>
+    </ul>
+
+    <div class="highlight">
+        ✔ Le journal est un outil de contrôle essentiel
+    </div>
+</section>
+
+<section id="obligation">
+    <h2>⚖️ Obligations légales</h2>
+
+    <ul>
+        <li>✔ Tenue obligatoire</li>
+        <li>✔ Pages numérotées (côtées)</li>
+        <li>✔ Signé par un juge (paraphé)</li>
+        <li>✔ Sans ratures ni altérations</li>
+        <li>✔ Enregistrement chronologique</li>
+    </ul>
+
+    <div class="highlight">
+        ✔ Une comptabilité irrégulière peut entraîner des sanctions
+    </div>
+</section>
+
+<section id="presentation">
+    <h2>📊 Présentation du journal</h2>
+
+    <table>
+
+<tr class="date"><td colspan="6">Date Opération</td></tr>
+
+<tr><td>N° Compte D</td><td> </td><td>Intitulé de(s) compte(s) à débiter</td><td></td><td>Montant D</td><td></td></tr>
+<tr><td> </td><td> N° Compte C</td><td> </td> <td> Intitulé de(s) compte(s) à créditer </td><td> </td><td>Montant C</td></tr>
+<tr class="date"><td colspan="6">Libellé Opération</td></tr>
+
+</table>
+
+    <div class="highlight">
+        ✔ Chaque opération est enregistrée avec précision et avec son libellé
+    </div>
+</section>
+<section id="EA">
+
+<div class="exercice">
+
+<p>
+L’entreprise <b>SAHARA.SARL</b> est spécialisée dans la commercialisation des produits électroniques.  
+Sa situation au <b>01/01/2025</b> comprend les éléments suivants :
+</p>
+
+<ul>
+<li>Mobilier de bureau : 60 000 MAD</li>
+<li>Fonds commercial : 350 000 MAD</li>
+<li>Bâtiments : 1 100 000 MAD</li>
+<li>Matériel de transport : 300 000 MAD</li>
+<li>Marchandises (en stock) : 95 000 MAD</li>
+<li>Banque (SD) : 280 000 MAD</li>
+<li>Caisse : 150 000 MAD</li>
+<li>Dettes fournisseurs : 55 000 MAD</li>
+<li> Etat Impôts, taxes et assimilés (Etat créditeur) : 25 000 MAD</li>
+<li>Créances clients : 70 000 MAD</li>
+</ul>
+
+<p class="titre">
+Au cours de l’exercice 2025, l’entreprise a effectué les opérations suivantes :
+</p>
+
+<ul>
+
+<li>10/01/25 : Ventes de marchandises contre chèque : 95 000 MAD</li>
+
+<li>18/01/25 : Retrait de la banque pour alimenter la caisse : 20 000 MAD</li>
+
+<li>05/02/25 : Règlement par chèques bancaires des frais suivants :</li>
+<ul>
+<li>Loyer d’un magasin : 5 200 MAD</li>
+<li>Frais de publicité : 4 000 MAD</li>
+<li>Prime d’assurance : 3 000 MAD</li>
+</ul>
+
+<li>20/02/25 : Acquisition d’un ordinateur pour 15 000 MAD réglée comme suit :
+50% par chèque et le reste à crédit sur 6 mois.</li>
+
+<li>08/03/25 : Paiement par chèque des honoraires de l’expert-comptable : 18 000 MAD</li>
+
+<li>15/03/25 : Retours de marchandises par des clients : 12 000 MAD</li>
+
+<li>25/03/25 : L’entreprise a emprunté auprès de sa banque : 250 000 MAD</li>
+
+<li>10/04/25 : Achats de marchandises à crédit : 65 000 MAD</li>
+
+<li>20/05/25 : Ventes de marchandises contre chèques : 110 000 MAD</li>
+
+<li>05/06/25 : Règlement par chèques :</li>
+<ul>
+<li>Réparation d’un véhicule : 400 MAD</li>
+<li>Achat de timbres fiscaux : 200 MAD</li>
+<li>Facture de téléphone : 1 500 MAD</li>
+<li>Facture d’électricité et d’eau : 700 MAD</li>
+</ul>
+
+<li>18/06/25 : Reçu une commission en espèces : 15 000 MAD</li>
+
+<li>02/07/25 : Achat par la banque de 150 actions de la société « MAGHREB » à 120 MAD l’une</li>
+
+<li>05/09/25 : Virement bancaire en faveur des fournisseurs : 25 000 MAD</li>
+
+<li>10/10/25 : Paiement en espèces de la quittance d’électricité : 1 000 MAD</li>
+
+<li>15/10/25 : Paiement des salaires par virement bancaire : 30 000 MAD</li>
+
+<li>20/12/25 : Paiement en espèces des frais suivants :</li>
+<ul>
+<li>Assurances véhicules : 28 000 MAD</li>
+<li>Commissions d’intermédiaires : 3 200 MAD</li>
+<li>Taxe urbaine : 3 000 MAD</li>
+<li>Taxe professionnelle : 1 200 MAD</li>
+</ul>
+
+<li>31/12/25 : Paiement des charges sociales par chèques bancaires :</li>
+<ul>
+<li>Salaire des employés : 35 000 MAD</li>
+<li>Cotisations de sécurité : 18 000 MAD</li>
+<li>Assurances groupe : 10 000 MAD</li>
+<li>Cotisations de retraite : 14 000 MAD</li>
+</ul>
+
+</ul>
+
+<p><b>N.B :</b> Le stock final de marchandises au 31/12/2025 est de <b>60 000 MAD</b></p>
+
+<p class="titre">Travail à faire :</p>
+
+<ol>
+<li>Établir le bilan au 01/01/2025</li>
+<li>Passer les écritures au journal </li>
+</ol>
+
+</div>
+<table>
+
+<colgroup>
+    <col class="large">
+    <col class="small">
+    <col class="large">
+    <col class="small">
+</colgroup>
+
+<tr>
+    <td colspan="4" class="title">
+        1-Bilan au 01/01/2025
+    </td>
+</tr>
+
+<tr class="bold">
+    <td>ACTIF</td>
+    <td>Montant</td>
+    <td>PASSIF</td>
+    <td>Montant</td>
+</tr>
+
+<tr>
+    <td class="bold lvl1">2 ACTIF IMMOBILISE</td>
+    <td></td>
+    <td class="bold lvl1">1 FINANCEMENT PERMANENT</td>
+    <td></td>
+</tr>
+
+<tr>
+    <td class="bold lvl2">22 IMMOBILISATIONS INCORPORELLES</td>
+    <td></td>
+    <td class="bold lvl2">11 CAPITAUX PROPRES</td>
+    <td></td>
+</tr>
+
+<tr>
+    <td class="lvl3">223 Fonds commercial</td>
+    <td></td>
+    <td class="lvl3">111 Capital social ou personnel</td>
+    <td></td>
+</tr>
+
+<tr>
+    <td class="lvl4">2230 Fonds commercial</td>
+    <td class="montant">350.000,00</td>
+    <td class="lvl4">1111 Capital social</td>
+    <td class="montant">2.325.000,00</td>
+</tr>
+
+<tr>
+    <td class="bold lvl2">23 IMMOBILISATIONS CORPORELLES</td>
+    <td></td>
+    <td></td>
+    <td></td>
+</tr>
+
+<tr>
+    <td class="lvl3">232 Constructions</td>
+    <td></td>
+    <td></td>
+    <td></td>
+</tr>
+
+<tr>
+    <td class="lvl4">2321 Bâtiments</td>
+    <td class="montant">1.100.000,00</td>
+    <td></td>
+    <td></td>
+</tr>
+
+<tr>
+    <td class="lvl3">234 Matériel de transport</td>
+    <td></td>
+    <td></td>
+    <td></td>
+</tr>
+
+<tr>
+    <td class="lvl4">2340 Matériel de transport</td>
+    <td class="montant">300.000,00</td>
+    <td></td>
+    <td></td>
+</tr>
+
+<tr>
+    <td class="lvl3">235 MMB et aménagements divers</td>
+    <td></td>
+    <td></td>
+    <td></td>
+</tr>
+
+<tr>
+    <td class="lvl4">2351 Mobilier de bureau</td>
+    <td class="montant">60.000,00</td>
+    <td></td>
+    <td></td>
+</tr>
+
+<tr>
+    <td class="bold lvl1">3 ACTIF CIRCULANT</td>
+    <td></td>
+    <td class="bold lvl1">4 PASSIF CIRCULANT</td>
+    <td></td>
+</tr>
+
+<tr>
+    <td class="bold lvl2">31 STOCKS</td>
+    <td></td>
+    <td class="bold lvl2">44 DETTES DU PASSIF CIRCULANT</td>
+    <td></td>
+</tr>
+
+<tr>
+    <td class="lvl3">311 Marchandises</td>
+    <td></td>
+    <td class="lvl3">441 Fournisseurs et CR</td>
+    <td></td>
+</tr>
+
+<tr>
+    <td class="lvl4">3111 Marchandises</td>
+    <td class="montant">95.000,00</td>
+    <td class="lvl4">4411 Fournisseurs</td>
+    <td class="montant">55.000,00</td>
+</tr>
+
+<tr>
+    <td class="bold lvl2">34 CREANCES DE L'ACTIF CIRCULANT</td>
+    <td></td>
+    <td class="lvl3">445 Etat - créditeur</td>
+    <td></td>
+</tr>
+
+<tr>
+    <td class="lvl3">342 Clients et CR</td>
+    <td></td>
+    <td class="lvl4">4452 Etat Impôts, taxes et assimilés</td>
+    <td class="montant">25.000,00</td>
+</tr>
+
+<tr>
+    <td class="lvl4">3421 Clients</td>
+    <td class="montant">70.000,00</td>
+    <td></td>
+    <td></td>
+</tr>
+
+<tr>
+    <td class="bold lvl1">5 TRESORERIE</td>
+    <td></td>
+    <td></td>
+    <td></td>
+</tr>
+
+<tr>
+    <td class="bold lvl2">51 TRESORERIE-ACTIF</td>
+    <td></td>
+    <td></td>
+    <td></td>
+</tr>
+
+<tr>
+    <td class="lvl3">514 Banques, TG et CP</td>
+    <td></td>
+    <td></td>
+    <td></td>
+</tr>
+
+<tr>
+    <td class="lvl4">5141 Banques (SD)</td>
+    <td class="montant">280.000,00</td>
+    <td></td>
+    <td></td>
+</tr>
+
+<tr>
+    <td class="lvl3">516 Caisses, RA et A</td>
+    <td></td>
+    <td></td>
+    <td></td>
+</tr>
+
+<tr>
+    <td class="lvl4">5161 Caisses</td>
+    <td class="montant">150.000,00</td>
+    <td></td>
+    <td></td>
+</tr>
+
+<tr class="bold">
+    <td>Total</td>
+    <td class="montant">2.405.000,00</td>
+    <td>Total</td>
+    <td class="montant">2.405.000,00</td>
+</tr>
+
+</table>
+2-Journal
+<table>
+
+<!-- 01/01/2025 -->
+<tr class="date"><td colspan="6">01/01/2025</td></tr>
+
+<tr><td class="compte">2230</td><td></td><td class="libelle">Fonds commercial</td><td></td><td class="montant">350.000,00</td><td></td></tr>
+<tr><td class="compte">2321</td><td></td><td class="libelle">Bâtiments</td><td></td><td class="montant">1.100.000,00</td><td></td></tr>
+<tr><td class="compte">2340</td><td></td><td class="libelle">Matériel de transport</td><td></td><td class="montant">300.000,00</td><td></td></tr>
+<tr><td class="compte">2351</td><td></td><td class="libelle">Mobilier de bureau</td><td></td><td class="montant">60.000,00</td><td></td></tr>
+<tr><td class="compte">3111</td><td></td><td class="libelle">Marchandises</td><td></td><td class="montant">95.000,00</td><td></td></tr>
+<tr><td class="compte">3421</td><td></td><td class="libelle">Clients</td><td></td><td class="montant">70.000,00</td><td></td></tr>
+<tr><td class="compte">5141</td><td></td><td class="libelle">Banques</td><td></td><td class="montant">280.000,00</td><td></td></tr>
+<tr><td class="compte">5161</td><td></td><td class="libelle">Caisses</td><td></td><td class="montant">150.000,00</td><td></td></tr>
+
+<tr><td></td><td class="compte">1111</td><td></td><td class="libelle">Capital social</td><td></td><td class="montant">2.325.000,00</td></tr>
+<tr><td></td><td class="compte">4411</td><td></td><td class="libelle">Fournisseurs</td><td></td><td class="montant">55.000,00</td></tr>
+<tr><td></td><td class="compte">4452</td><td></td><td class="libelle">Etat Impôts, taxes et assimilés</td><td></td><td class="montant">25.000,00</td></tr>
+
+<!-- 01/01/2025 -->
+<tr class="date"><td colspan="6">01/01/2025</td></tr>
+<tr><td class="compte">6114</td><td></td><td class="libelle">Variation de stocks de marchandises</td><td></td><td class="montant">95.000,00</td><td></td></tr>
+<tr><td></td><td class="compte">3111</td><td></td><td class="libelle">Marchandises</td><td></td><td class="montant">95.000,00</td></tr>
+
+<!-- 10/01/2025 -->
+<tr class="date"><td colspan="6">10/01/2025</td></tr>
+<tr><td class="compte">5141</td><td></td><td class="libelle">Banques</td><td></td><td class="montant">95.000,00</td><td></td></tr>
+<tr><td></td><td class="compte">7111</td><td></td><td class="libelle">Ventes de marchandises</td><td></td><td class="montant">95.000,00</td></tr>
+
+<!-- 18/01/2025 -->
+<tr class="date"><td colspan="6">18/01/2025</td></tr>
+<tr><td class="compte">5161</td><td></td><td class="libelle">Caisses</td><td></td><td class="montant">20.000,00</td><td></td></tr>
+<tr><td></td><td class="compte">5141</td><td></td><td class="libelle">Banques</td><td></td><td class="montant">20.000,00</td></tr>
+
+<!-- 05/02/2025 -->
+<tr class="date"><td colspan="6">05/02/2025</td></tr>
+<tr><td class="compte">6131</td><td></td><td class="libelle">Locations et charges locatives</td><td></td><td class="montant">5.200,00</td><td></td></tr>
+<tr><td class="compte">6141</td><td></td><td class="libelle">Publicité, PRP</td><td></td><td class="montant">4.000,00</td><td></td></tr>
+<tr><td class="compte">6134</td><td></td><td class="libelle">Primes d'assurances</td><td></td><td class="montant">3.000,00</td><td></td></tr>
+<tr><td></td><td class="compte">5141</td><td></td><td class="libelle">Banques</td><td></td><td class="montant">12.200,00</td></tr>
+
+<!-- 20/02/2025 -->
+<tr class="date"><td colspan="6">20/02/2025</td></tr>
+<tr><td class="compte">2355</td><td></td><td class="libelle">Matériel informatique</td><td></td><td class="montant">15.000,00</td><td></td></tr>
+<tr><td></td><td class="compte">5141</td><td></td><td class="libelle">Banques</td><td></td><td class="montant">7.500,00</td></tr>
+<tr><td></td><td class="compte">4481</td><td></td><td class="libelle">Dettes sur acquisitions d'immobilisations</td><td></td><td class="montant">7.500,00</td></tr>
+
+<!-- 08/03/2025 -->
+<tr class="date"><td colspan="6">08/03/2025</td></tr>
+<tr><td class="compte">6136</td><td></td><td class="libelle">Rémunérations d'intermédiaires et honoraires</td><td></td><td class="montant">18.000,00</td><td></td></tr>
+<tr><td></td><td class="compte">5141</td><td></td><td class="libelle">Banques</td><td></td><td class="montant">18.000,00</td></tr>
+
+<!-- 15/03/2025 -->
+<tr class="date"><td colspan="6">15/03/2025</td></tr>
+<tr><td class="compte">7111</td><td></td><td class="libelle">Ventes de marchandises</td><td></td><td class="montant">12.000,00</td><td></td></tr>
+<tr><td></td><td class="compte">3421</td><td></td><td class="libelle">Clients</td><td></td><td class="montant">12.000,00</td></tr>
+
+<!-- 25/03/2025 -->
+<tr class="date"><td colspan="6">25/03/2025</td></tr>
+<tr><td class="compte">5141</td><td></td><td class="libelle">Banques</td><td></td><td class="montant">250.000,00</td><td></td></tr>
+<tr><td></td><td class="compte">1481</td><td></td><td class="libelle">Emprunts auprès des EC</td><td></td><td class="montant">250.000,00</td></tr>
+
+<!-- 10/04/2025 -->
+<tr class="date"><td colspan="6">10/04/2025</td></tr>
+<tr><td class="compte">6111</td><td></td><td class="libelle">Achats de marchandises</td><td></td><td class="montant">65.000,00</td><td></td></tr>
+<tr><td></td><td class="compte">4411</td><td></td><td class="libelle">Fournisseurs</td><td></td><td class="montant">65.000,00</td></tr>
+
+<!-- 20/05/2025 -->
+<tr class="date"><td colspan="6">20/05/2025</td></tr>
+<tr><td class="compte">5141</td><td></td><td class="libelle">Banques</td><td></td><td class="montant">110.000,00</td><td></td></tr>
+<tr><td></td><td class="compte">7111</td><td></td><td class="libelle">Ventes de marchandises</td><td></td><td class="montant">110.000,00</td></tr>
+
+<!-- 05/06/2025 -->
+<tr class="date"><td colspan="6">05/06/2025</td></tr>
+
+<tr>
+    <td class="compte">5141</td>
+    <td></td>
+    <td class="libelle">Entretien et réparations</td>
+    <td></td>
+    <td class="montant">400,00</td>
+    <td></td>
+</tr>
+
+<tr>
+    <td class="compte">6167</td>
+    <td></td>
+    <td class="libelle">Impôts, taxes et droits assimilés</td>
+    <td></td>
+    <td class="montant">200,00</td>
+    <td></td>
+</tr>
+
+<tr>
+    <td class="compte">6145</td>
+    <td></td>
+    <td class="libelle">Frais postaux et frais de télécommunications</td>
+    <td></td>
+    <td class="montant">1.500,00</td>
+    <td></td>
+</tr>
+
+<tr>
+    <td class="compte">6125</td>
+    <td></td>
+    <td class="libelle">Achats non stockés de MF</td>
+    <td></td>
+    <td class="montant">700,00</td>
+    <td></td>
+</tr>
+
+<tr>
+    <td></td>
+    <td class="compte">5141</td>
+    <td></td>
+    <td class="libelle">Banques</td>
+    <td></td>
+    <td class="montant">2.800,00</td>
+</tr>
+
+<!-- 18/06/2025 -->
+<tr class="date"><td colspan="6">18/06/2025</td></tr>
+
+<tr>
+    <td class="compte">5161</td>
+    <td></td>
+    <td class="libelle">Caisses</td>
+    <td></td>
+    <td class="montant">15.000,00</td>
+    <td></td>
+</tr>
+
+<tr>
+    <td></td>
+    <td class="compte">7127</td>
+    <td></td>
+    <td class="libelle">Ventes de produits accessoires</td>
+    <td></td>
+    <td class="montant">15.000,00</td>
+</tr>
+
+<!-- 02/07/2025 -->
+<tr class="date"><td colspan="6">02/07/2025</td></tr>
+
+<tr>
+    <td class="compte">3501</td>
+    <td></td>
+    <td class="libelle">Actions</td>
+    <td></td>
+    <td class="montant">18.000,00</td>
+    <td></td>
+</tr>
+
+<tr>
+    <td></td>
+    <td class="compte">5141</td>
+    <td></td>
+    <td class="libelle">Banques</td>
+    <td></td>
+    <td class="montant">18.000,00</td>
+</tr>
+
+<!-- 05/09/2025 -->
+<tr class="date"><td colspan="6">05/09/2025</td></tr>
+
+<tr>
+    <td class="compte">4411</td>
+    <td></td>
+    <td class="libelle">Fournisseurs</td>
+    <td></td>
+    <td class="montant">25.000,00</td>
+    <td></td>
+</tr>
+
+<tr>
+    <td></td>
+    <td class="compte">5141</td>
+    <td></td>
+    <td class="libelle">Banques</td>
+    <td></td>
+    <td class="montant">25.000,00</td>
+</tr>
+
+<!-- 10/10/2025 -->
+<tr class="date"><td colspan="6">10/10/2025</td></tr>
+
+<tr>
+    <td class="compte">6125</td>
+    <td></td>
+    <td class="libelle">Achats non stockés de MF</td>
+    <td></td>
+    <td class="montant">1.000,00</td>
+    <td></td>
+</tr>
+
+<tr>
+    <td></td>
+    <td class="compte">5141</td>
+    <td></td>
+    <td class="libelle">Banques</td>
+    <td></td>
+    <td class="montant">1.000,00</td>
+</tr>
+
+<!-- 15/10/2025 -->
+<tr class="date"><td colspan="6">15/10/2025</td></tr>
+
+<tr>
+    <td class="compte">6171</td>
+    <td></td>
+    <td class="libelle">Rémunérations du personnel</td>
+    <td></td>
+    <td class="montant">30.000,00</td>
+    <td></td>
+</tr>
+
+<tr>
+    <td></td>
+    <td class="compte">5141</td>
+    <td></td>
+    <td class="libelle">Banques</td>
+    <td></td>
+    <td class="montant">30.000,00</td>
+</tr>
+
+<!-- 20/12/2025 -->
+<tr class="date"><td colspan="6">20/12/2025</td></tr>
+
+<tr>
+    <td class="compte">6134</td>
+    <td></td>
+    <td class="libelle">Primes d'assurances</td>
+    <td></td>
+    <td class="montant">28.000,00</td>
+    <td></td>
+</tr>
+
+<tr>
+    <td class="compte">6136</td>
+    <td></td>
+    <td class="libelle">Rémunérations d'intermédiaires et honoraires</td>
+    <td></td>
+    <td class="montant">3.200,00</td>
+    <td></td>
+</tr>
+
+<tr>
+    <td class="compte">6161</td>
+    <td></td>
+    <td class="libelle">Impôts et taxes directs</td>
+    <td></td>
+    <td class="montant">4.200,00</td>
+    <td></td>
+</tr>
+
+<tr>
+    <td></td>
+    <td class="compte">5161</td>
+    <td></td>
+    <td class="libelle">Caisses</td>
+    <td></td>
+    <td class="montant">35.400,00</td>
+</tr>
+
+<!-- 31/12/2025 -->
+<tr class="date"><td colspan="6">31/12/2025</td></tr>
+
+<tr>
+    <td class="compte">6171</td>
+    <td></td>
+    <td class="libelle">Rémunérations du personnel</td>
+    <td></td>
+    <td class="montant">35.000,00</td>
+    <td></td>
+</tr>
+
+<tr>
+    <td class="compte">6174</td>
+    <td></td>
+    <td class="libelle">Charges sociales</td>
+    <td></td>
+    <td class="montant">32.000,00</td>
+    <td></td>
+</tr>
+
+<tr>
+    <td class="compte">6176</td>
+    <td></td>
+    <td class="libelle">Charges sociales diverses</td>
+    <td></td>
+    <td class="montant">10.000,00</td>
+    <td></td>
+</tr>
+
+<tr>
+    <td></td>
+    <td class="compte">5161</td>
+    <td></td>
+    <td class="libelle">Caisses</td>
+    <td></td>
+    <td class="montant">77.000,00</td>
+</tr>
+
+<!-- 31/12/2025 -->
+<tr class="date"><td colspan="6">31/12/2025</td></tr>
+
+<tr>
+    <td class="compte">3111</td>
+    <td></td>
+    <td class="libelle">Marchandises</td>
+    <td></td>
+    <td class="montant">60.000,00</td>
+    <td></td>
+</tr>
+
+<tr>
+    <td></td>
+    <td class="compte">6114</td>
+    <td></td>
+    <td class="libelle">Variation de stocks de marchandises</td>
+    <td></td>
+    <td class="montant">60.000,00</td>
+</tr>
+
+</table>
+
+
+</section>
+<section id="EE">
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Exercice N°2 - Journal</title>
+
+<style>
+body{
+    font-family: Arial;
+    background:#f4f6f9;
+    margin:20px;
+}
+
+h1{
+    text-align:center;
+}
+
+table{
+    border-collapse:collapse;
+    width:100%;
+    margin-bottom:20px;
+    background:white;
+}
+
+th, td{
+    border:1px solid #333;
+    padding:8px;
+    text-align:center;
+}
+
+th{
+    background:#d5e0d0;
+}
+
+.titre{
+    font-weight:bold;
+    font-size:18px;
+    margin:15px 0;
+}
+
+ul{
+    margin-left:20px;
+}
+</style>
+
+</head>
+
+<body>
+
+<p class="titre">
+La situation de l’entreprise <b>AL AMAL.SA</b> se présente au <b>01/12/2025</b> ainsi :
+</p>
+
+<table>
+<tr>
+    <th>Intitulé des comptes</th>
+    <th>Somme en MAD</th>
+    <th>Intitulé des comptes</th>
+    <th>Somme en MAD</th>
+</tr>
+
+<tr><td>Banque</td><td>160 000</td><td>Fournisseurs</td><td>110 000</td></tr>
+<tr><td>Caisse</td><td>45 000</td><td>Frais de constitution</td><td>50 000</td></tr>
+<tr><td>Titres de participation</td><td>70 000</td><td>Installations techniques</td><td>65 000</td></tr>
+<tr><td>Clients</td><td>52 000</td><td>Matières premières</td><td>100 000</td></tr>
+<tr><td>CNSS</td><td>18 000</td><td>Produits finis</td><td>55 000</td></tr>
+<tr><td>Fonds commercial</td><td>180 000</td><td>Local</td><td>300 000</td></tr>
+
+</table>
+
+<p><b>Capital personnel à déterminer ?</b></p>
+
+<p class="titre">Durant le mois de Décembre, l’entreprise a effectué les opérations suivantes :</p>
+
+<table>
+<tr>
+    <th>Dates</th>
+    <th>Opérations</th>
+    <th>Montants</th>
+</tr>
+
+<tr>
+<td>02/12</td>
+<td>Emprunt auprès d’une banque remboursable sur 10 ans</td>
+<td>180 000</td>
+</tr>
+
+<tr>
+<td>04/12</td>
+<td>Achat de matières premières réglé 1/2 par chèque et le reste à crédit</td>
+<td>40 000</td>
+</tr>
+
+<tr>
+<td>06/12</td>
+<td>Acquisition d’un véhicule utilitaire payable dans 12 mois</td>
+<td>85 000</td>
+</tr>
+
+<tr>
+<td>08/12</td>
+<td>Vente de produits finis : 30% espèces, 40% chèque, reste à crédit</td>
+<td>70 000</td>
+</tr>
+
+<tr>
+<td>10/12</td>
+<td>Règlement d’un fournisseur en espèces</td>
+<td>5 000</td>
+</tr>
+
+<tr>
+<td>12/12</td>
+<td>Reçu chèque d’un client comme avance</td>
+<td>6 500</td>
+</tr>
+
+<tr>
+<td>14/12</td>
+<td>Paiement en espèces :</td>
+<td></td>
+</tr>
+
+<tr>
+<td></td>
+<td>
+<ul>
+<li>Timbres postaux</li>
+<li>Timbres fiscaux</li>
+<li>Facture d’électricité</li>
+<li>Facture téléphone</li>
+<li>Frais de réparation</li>
+</ul>
+</td>
+<td>
+<ul>
+<li>200</li>
+<li>450</li>
+<li>950</li>
+<li>1 300</li>
+<li>2 800</li>
+</ul>
+</td>
+</tr>
+
+<tr>
+<td>16/12</td>
+<td>Règlement des frais de publicité par chèque</td>
+<td>3 500</td>
+</tr>
+
+<tr>
+<td>18/12</td>
+<td>Réception d’intérêts bancaires (avis de crédit)</td>
+<td>2 200</td>
+</tr>
+
+<tr>
+<td>20/12</td>
+<td>Encaissement du solde client par chèque</td>
+<td>12 000</td>
+</tr>
+
+<tr>
+<td>22/12</td>
+<td>Paiement de la taxe locale en espèces</td>
+<td>1 200</td>
+</tr>
+
+<tr>
+<td>25/12</td>
+<td>Paiement des intérêts bancaires</td>
+<td>1 500</td>
+</tr>
+
+<tr>
+<td>26/12</td>
+<td>Achat de matières premières à crédit</td>
+<td>35 000</td>
+</tr>
+
+<tr>
+<td>27/12</td>
+<td>Prêt accordé à un salarié par chèque</td>
+<td>18 000</td>
+</tr>
+
+<tr>
+<td>29/12</td>
+<td>Livraison de la commande relative à l’avance reçue</td>
+<td>45 000</td>
+</tr>
+
+<tr>
+<td>31/12</td>
+<td>Paiement des salaires par virement bancaire</td>
+<td>110 000</td>
+</tr>
+
+</table>
+
+<p class="titre">Travail à faire :</p>
+
+<ol>
+<li>Établir le bilan au 01/12/2025</li>
+<li>Passer les écritures du mois 12 dans le journal</li>
+NB. Le stock au 31/12/2025 est estimé à :
+</ol>
+
+<ul>
+<li>Matières premières : 95 000 MAD</li>
+<li>Produits finis : 60 000 MAD</li>
+</ul>
+
+</body>
+</html>
+💡Nous vous invitons à recourir à notre formulaire interactif afin d’élaborer le bilan et le journal. Nous vous recommandons également de consulter les exercices et les études de cas corrigés mis à votre disposition sur notre site, ainsi que des extraits d’examens corrigés en lien avec ce thème.
+
+</section>
+
+<footer>
+    Formation en comptabilité générale
+<br>
+
+<a href="C1P1M1.html">⬅ Retour </a>
+
+</footer>
+
+</body>
+</html>
+
+
+
+
